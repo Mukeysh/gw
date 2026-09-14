@@ -1,0 +1,22 @@
+uuid: 236e84a7-18ba-463b-b7bf-885840f9ac37
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - growibes
+_core:
+  default_config_hash: VhBzWb7lMRtIOg9G7VSw_0uopi-7zXeHq4vXqqV1HFE
+id: growibes_breadcrumbs
+theme: growibes
+region: header
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

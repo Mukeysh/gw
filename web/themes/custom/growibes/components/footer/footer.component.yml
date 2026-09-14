@@ -1,0 +1,23 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Footer
+status: stable
+group: Global
+description: 'Global homepage-final footer — brand wordmark and one-line positioning.'
+props:
+  type: object
+  properties:
+    brand:
+      type: string
+      title: Brand
+      default: GROWIBES
+      examples:
+        - GROWIBES
+    tagline:
+      type: string
+      title: Tagline
+      default: Enterprise digital engineering for the Drupal + AI era.
+      examples:
+        - Enterprise digital engineering for the Drupal + AI era.
+libraryOverrides:
+  dependencies:
+    - growibes/global

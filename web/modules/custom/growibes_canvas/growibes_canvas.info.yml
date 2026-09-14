@@ -1,0 +1,7 @@
+name: Growibes Canvas
+type: module
+description: 'Maps the Growibes HTML+CSS SDC props to unlimited Canvas textareas.'
+package: Growibes
+core_version_requirement: ^11
+dependencies:
+  - canvas:canvas

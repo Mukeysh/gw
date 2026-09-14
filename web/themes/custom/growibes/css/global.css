@@ -1,0 +1,118 @@
+/**
+ * Growibes global CSS from homepage-final.
+ * Tokens + reset + layout used by every page. Header/footer chrome is
+ * component CSS. Unique page art direction is pasted into growibes:html.
+ */
+
+:root {
+  --ink: #07080b;
+  --paper: #f6f5f1;
+  --white: #fff;
+  --blue: #5267ff;
+  --cyan: #7de7ff;
+  --violet: #7627ff;
+  --magenta: #d719ff;
+  --mint: #baf7d1;
+  --lime: #d6ff59;
+  --orange: #ff805e;
+  --pink: #ff74b8;
+  --line: #d9d8d2;
+  --muted: #70747d;
+  --max: 1320px;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+body {
+  h1, h2, h3, h4, h5, h6 {
+  line-height: normal !important;
+  }
+}
+img,
+svg,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+.gw-container,
+.container {
+  width: min(calc(100% - 64px), var(--max));
+  margin: auto;
+}
+
+.gw-skip-link {
+  position: absolute;
+  left: 12px;
+  top: -40px;
+  z-index: 200;
+  padding: 8px 12px;
+  background: #fff;
+  color: #111;
+  font-size: 12px;
+  font-weight: 800;
+  border-radius: 8px;
+}
+
+.gw-skip-link:focus {
+  top: 12px;
+}
+
+.layout-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.gw-page-main {
+  flex: 1 0 auto;
+}
+
+.gw-page-main:focus {
+  outline: none;
+}
+
+.gw-status {
+  width: min(calc(100% - 64px), var(--max));  
+}
+
+.gw-status .messages {
+  padding: 14px 16px;
+  border-radius: 12px;
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+@media (max-width: 600px) {
+  .gw-container,
+  .container {
+    width: min(calc(100% - 34px), var(--max));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}

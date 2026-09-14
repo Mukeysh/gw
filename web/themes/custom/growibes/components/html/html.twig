@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Isolated HTML+CSS island for unique Growibes page art direction.
+ *
+ * Paste production page body HTML and its CSS. Global header/footer stay
+ * outside this island. JS moves children into shadow DOM so page CSS cannot
+ * restyle site chrome. Without JS, markup still renders in the light DOM.
+ */
+#}
+<div{{ attributes.addClass('gw-html') }}>
+  {% if css %}
+    <style>{{ css|raw }}</style>
+  {% endif %}
+  {{ html|raw }}
+</div>

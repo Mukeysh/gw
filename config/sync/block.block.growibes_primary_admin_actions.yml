@@ -1,0 +1,20 @@
+uuid: d2d612a5-9c40-42f0-98e0-c6087aea3017
+langcode: en
+status: true
+dependencies:
+  theme:
+    - growibes
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: growibes_primary_admin_actions
+theme: growibes
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

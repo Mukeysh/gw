@@ -1,0 +1,22 @@
+uuid: 67b0dbce-6cc0-4baa-af19-26e74f941ce3
+langcode: en
+status: true
+dependencies:
+  theme:
+    - growibes
+_core:
+  default_config_hash: ydSxdq7R66I8UMC460rOzlfzvlUL4VRbdwc6z9DWaUI
+id: growibes_secondary_local_tasks
+theme: growibes
+region: highlighted
+weight: -2
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Secondary tabs'
+  label_display: '0'
+  provider: core
+  primary: false
+  secondary: true
+visibility: {  }

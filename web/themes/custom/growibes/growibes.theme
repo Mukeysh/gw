@@ -1,0 +1,115 @@
+<?php
+
+/**
+ * @file
+ * Growibes theme preprocess implementations.
+ */
+
+declare(strict_types=1);
+
+use Drupal\Core\Menu\MenuTreeParameters;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_preprocess_html().
+ */
+function growibes_preprocess_html(array &$variables): void {
+  $variables['html_attributes']->setAttribute('lang', $variables['html_attributes']['lang'] ?? 'en');
+}
+
+/**
+ * Implements hook_preprocess_page().
+ *
+ * Header and footer always come from homepage-final unless Canvas (or a block)
+ * already filled those regions.
+ */
+function growibes_preprocess_page(array &$variables): void {
+  $variables['growibes_canvas'] = !empty($variables['rendered_by_canvas']);
+
+  if (!growibes_region_has_content($variables['page']['header'] ?? [])) {
+    $variables['page']['header']['growibes_header'] = [
+      '#type' => 'component',
+      '#component' => 'growibes:header',
+      '#slots' => [
+        'navigation' => growibes_build_main_menu(),
+      ],
+      '#weight' => -100,
+    ];
+  }
+
+  if (!growibes_region_has_content($variables['page']['footer'] ?? [])) {
+    $variables['page']['footer']['growibes_footer'] = [
+      '#type' => 'component',
+      '#component' => 'growibes:footer',
+      '#weight' => 100,
+    ];
+  }
+}
+
+/**
+ * Builds the Drupal Main menu as a fully expanded tree.
+ */
+function growibes_build_main_menu(): array {
+  $menu_tree = \Drupal::menuTree();
+  $parameters = new MenuTreeParameters();
+  $parameters->onlyEnabledLinks();
+  $parameters->setMaxDepth(3);
+  $ids = [];
+  foreach (\Drupal::entityTypeManager()->getStorage('menu_link_content')->loadByProperties(['menu_name' => 'main']) as $link) {
+    $ids[] = 'menu_link_content:' . $link->uuid();
+  }
+  if ($ids) {
+    $parameters->expandedParents = array_values(array_unique(array_merge([''], $ids)));
+  }
+  $tree = $menu_tree->load('main', $parameters);
+  $tree = $menu_tree->transform($tree, [
+    ['callable' => 'menu.default_tree_manipulators:checkAccess'],
+    ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
+  ]);
+  return $menu_tree->build($tree);
+}
+
+/**
+ * Implements hook_preprocess_menu().
+ */
+function growibes_preprocess_menu(array &$variables): void {
+  if (($variables['menu_name'] ?? '') !== 'main') {
+    return;
+  }
+  growibes_prepare_menu_items($variables['items']);
+}
+
+/**
+ * Marks mega columns and nolink parents on a menu item tree.
+ */
+function growibes_prepare_menu_items(array &$items): void {
+  foreach ($items as &$item) {
+    $url = $item['url'] ?? NULL;
+    $item['is_nolink'] = $url instanceof \Drupal\Core\Url
+      && $url->isRouted()
+      && $url->getRouteName() === '<nolink>';
+    $item['is_mega'] = FALSE;
+    foreach ($item['below'] as $child) {
+      if (!empty($child['below'])) {
+        $item['is_mega'] = TRUE;
+        break;
+      }
+    }
+    if (!empty($item['below'])) {
+      growibes_prepare_menu_items($item['below']);
+    }
+  }
+}
+
+/**
+ * Returns TRUE when a page region contains a visible child.
+ */
+function growibes_region_has_content(array $region): bool {
+  foreach (Element::getVisibleChildren($region) as $key) {
+    if (is_array($region[$key]) && $region[$key] !== []) {
+      return TRUE;
+    }
+  }
+  return FALSE;
+}

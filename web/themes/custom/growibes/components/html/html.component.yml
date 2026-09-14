@@ -1,0 +1,37 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: HTML
+status: stable
+group: Pages
+description: 'Paste a page body HTML and its CSS. Do not include the site header or footer — those are global. Page CSS is isolated so unique art direction cannot leak into chrome.'
+props:
+  type: object
+  properties:
+    html:
+      type: string
+      title: HTML
+      description: Page markup only. Strip <header>, <nav class="nav">, and <footer> from the production HTML before pasting.
+      x-textarea: true
+      examples:
+        - |
+          <section class="hero">
+            <div class="container">
+              <div class="eyebrow">Growibes / Enterprise Digital Engineering</div>
+              <h1>Where <em>enterprise Drupal</em> becomes an intelligent platform.</h1>
+            </div>
+          </section>
+    css:
+      type: string
+      title: CSS
+      description: Page stylesheet from the production HTML <style> block. html/body/:root rules are mapped onto this island automatically.
+      x-textarea: true
+      examples:
+        - |
+          .hero{min-height:1020px;padding:170px 0 90px;background:#08090c;color:#fff}
+          .eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.18em;font-weight:800;color:#7f8691}
+          .hero h1{font-size:clamp(68px,9.5vw,150px);line-height:.79;letter-spacing:-.09em}
+          .hero h1 em{font-style:normal;color:#9ea9ff}
+libraryOverrides:
+  dependencies:
+    - growibes/global
+    - core/once
+    - core/drupal

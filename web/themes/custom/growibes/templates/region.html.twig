@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Region template — no extra wrappers that would fight Canvas.
+ */
+#}
+{% if content %}
+  <div{{ attributes }}>
+    {{ content }}
+  </div>
+{% endif %}

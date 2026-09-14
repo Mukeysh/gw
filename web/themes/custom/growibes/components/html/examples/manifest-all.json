@@ -1,0 +1,362 @@
+[
+  {
+    "source": "01_Digital_Platforms/growibes-enterprise-digital-platforms-award.html",
+    "slug": "digital-platforms",
+    "alias": "/capabilities/digital-platforms",
+    "title": "Enterprise Digital Platforms",
+    "group": "digital-platforms",
+    "description": "",
+    "html_file": "digital-platforms.html",
+    "css_file": "digital-platforms.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-enterprise-drupal-award.html",
+    "slug": "enterprise-drupal",
+    "alias": "/capabilities/digital-platforms/enterprise-drupal",
+    "title": "Enterprise Drupal",
+    "group": "digital-platforms",
+    "description": "Enterprise Drupal architecture, modernization and engineering for platforms where content, integrations, governance and business continuity matter.",
+    "html_file": "enterprise-drupal.html",
+    "css_file": "enterprise-drupal.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-migrations-award.html",
+    "slug": "migrations",
+    "alias": "/capabilities/digital-platforms/migration-modernization",
+    "title": "Migration & Platform Modernization",
+    "group": "digital-platforms",
+    "description": "Enterprise Drupal migration and platform modernization without losing content, search equity, workflows or business continuity.",
+    "html_file": "migrations.html",
+    "css_file": "migrations.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-multisite-multibrand-award.html",
+    "slug": "multisite",
+    "alias": "/capabilities/digital-platforms/multisite-multibrand",
+    "title": "Multisite & Multi-brand",
+    "group": "digital-platforms",
+    "description": "",
+    "html_file": "multisite.html",
+    "css_file": "multisite.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-global-multilingual-award.html",
+    "slug": "multilingual",
+    "alias": "/capabilities/digital-platforms/global-multilingual",
+    "title": "Global & Multilingual Drupal",
+    "group": "digital-platforms",
+    "description": "",
+    "html_file": "multilingual.html",
+    "css_file": "multilingual.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-content-governance-award.html",
+    "slug": "content-governance",
+    "alias": "/capabilities/digital-platforms/content-governance",
+    "title": "Content Governance",
+    "group": "digital-platforms",
+    "description": "",
+    "html_file": "content-governance.html",
+    "css_file": "content-governance.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-digital-asset-management-award.html",
+    "slug": "digital-asset-management",
+    "alias": "/capabilities/digital-platforms/digital-asset-management",
+    "title": "Digital Asset Management",
+    "group": "digital-platforms",
+    "description": "",
+    "html_file": "digital-asset-management.html",
+    "css_file": "digital-asset-management.css"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-personalization-digital-experience-award.html",
+    "slug": "personalization",
+    "alias": "/capabilities/experience-growth/personalization",
+    "title": "Personalization",
+    "group": "experience",
+    "description": "",
+    "html_file": "personalization.html",
+    "css_file": "personalization.css"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-analytics-optimization-award.html",
+    "slug": "analytics",
+    "alias": "/capabilities/experience-growth/analytics-optimization",
+    "title": "Analytics & Optimization",
+    "group": "experience",
+    "description": "",
+    "html_file": "analytics.html",
+    "css_file": "analytics.css"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-commerce-digital-experience-award.html",
+    "slug": "commerce",
+    "alias": "/capabilities/experience-growth/commerce",
+    "title": "Commerce & Digital Revenue",
+    "group": "experience",
+    "description": "",
+    "html_file": "commerce.html",
+    "css_file": "commerce.css"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-seo-aeo-ai-visibility-award.html",
+    "slug": "seo-aeo",
+    "alias": "/capabilities/experience-growth/seo-aeo-ai-visibility",
+    "title": "SEO, AEO & AI Visibility",
+    "group": "experience",
+    "description": "Enterprise search visibility engineering across SEO, answer engines and AI discovery.",
+    "html_file": "seo-aeo.html",
+    "css_file": "seo-aeo.css"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-marketing-automation-lead-generation-award.html",
+    "slug": "marketing-automation",
+    "alias": "/capabilities/experience-growth/marketing-automation",
+    "title": "Marketing Automation & Lead Generation",
+    "group": "experience",
+    "description": "",
+    "html_file": "marketing-automation.html",
+    "css_file": "marketing-automation.css"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-design-systems-experience-engineering-award.html",
+    "slug": "design-systems",
+    "alias": "/capabilities/experience-growth/design-systems",
+    "title": "Design Systems & Experience Engineering",
+    "group": "experience",
+    "description": "",
+    "html_file": "design-systems.html",
+    "css_file": "design-systems.css"
+  },
+  {
+    "source": "03_Intelligent_Enterprise/growibes-intelligent-enterprise-ai-platform-award.html",
+    "slug": "intelligent-enterprise",
+    "alias": "/capabilities/intelligent-enterprise",
+    "title": "Intelligent Enterprise",
+    "group": "intelligent-enterprise",
+    "description": "",
+    "html_file": "intelligent-enterprise.html",
+    "css_file": "intelligent-enterprise.css"
+  },
+  {
+    "source": "03_Intelligent_Enterprise/growibes-drupal-ai-award.html",
+    "slug": "drupal-ai",
+    "alias": "/capabilities/intelligent-enterprise/drupal-ai",
+    "title": "Drupal AI",
+    "group": "intelligent-enterprise",
+    "description": "Move Drupal AI from disconnected experiments to governed production systems: AI search, content intelligence, workflow automation, RAG, agents and AI-assisted engineering.",
+    "html_file": "drupal-ai.html",
+    "css_file": "drupal-ai.css"
+  },
+  {
+    "source": "03_Intelligent_Enterprise/growibes-intelligent-enterprise-ai.html",
+    "slug": "intelligent-enterprise-ai",
+    "alias": "/capabilities/intelligent-enterprise/ai-agents",
+    "title": "Intelligent Enterprise AI",
+    "group": "intelligent-enterprise",
+    "description": "Make your Drupal ecosystem intelligent \u2014 without making it ungovernable.",
+    "html_file": "intelligent-enterprise-ai.html",
+    "css_file": "intelligent-enterprise-ai.css"
+  },
+  {
+    "source": "03_Intelligent_Enterprise/growibes-sovereign-core.html",
+    "slug": "sovereign-core",
+    "alias": "/capabilities/intelligent-enterprise/sovereign-core",
+    "title": "Sovereign CORE",
+    "group": "intelligent-enterprise",
+    "description": "Sovereign CORE\u2122 \u2014 a control architecture for enterprise Drupal, AI, data and operations.",
+    "html_file": "sovereign-core.html",
+    "css_file": "sovereign-core.css"
+  },
+  {
+    "source": "04_Connected_Enterprise/growibes-connected-enterprise.html",
+    "slug": "connected-enterprise",
+    "alias": "/capabilities/connected-enterprise",
+    "title": "Connected Enterprise",
+    "group": "connected-enterprise",
+    "description": "Connect the enterprise without creating another layer of complexity.",
+    "html_file": "connected-enterprise.html",
+    "css_file": "connected-enterprise.css"
+  },
+  {
+    "source": "04_Connected_Enterprise/growibes-integrations-api-award.html",
+    "slug": "integrations",
+    "alias": "/capabilities/connected-enterprise/integrations",
+    "title": "API & Enterprise Integrations",
+    "group": "connected-enterprise",
+    "description": "Enterprise Drupal integrations and API architecture that connect content, CRM, ERP, PIM, DAM, identity, commerce and digital experiences into one coherent system.",
+    "html_file": "integrations.html",
+    "css_file": "integrations.css"
+  },
+  {
+    "source": "04_Connected_Enterprise/growibes-headless-api-first-award.html",
+    "slug": "headless",
+    "alias": "/capabilities/connected-enterprise/headless-api-first",
+    "title": "Headless & API-First",
+    "group": "connected-enterprise",
+    "description": "",
+    "html_file": "headless.html",
+    "css_file": "headless.css"
+  },
+  {
+    "source": "04_Connected_Enterprise/growibes-connected-enterprise-api-integration-composable-award.html",
+    "slug": "connected-apis",
+    "alias": "/capabilities/connected-enterprise/composable",
+    "title": "APIs, Integrations & Composable Architecture",
+    "group": "connected-enterprise",
+    "description": "",
+    "html_file": "connected-apis.html",
+    "css_file": "connected-apis.css"
+  },
+  {
+    "source": "05_Enterprise_Engineering/digital-trust-security-center.html",
+    "slug": "digital-trust",
+    "alias": "/capabilities/enterprise-engineering/security",
+    "title": "Digital Trust",
+    "group": "engineering",
+    "description": "Growibes digital trust: security, performance and accessibility engineered into architecture, components, delivery and ongoing operations.",
+    "html_file": "digital-trust.html",
+    "css_file": "digital-trust.css"
+  },
+  {
+    "source": "05_Enterprise_Engineering/growibes-security-performance-award-v2.html",
+    "slug": "security-performance",
+    "alias": "/capabilities/enterprise-engineering/performance",
+    "title": "Security & Performance",
+    "group": "engineering",
+    "description": "",
+    "html_file": "security-performance.html",
+    "css_file": "security-performance.css"
+  },
+  {
+    "source": "05_Enterprise_Engineering/growibes-cloud-devops-platform-engineering-award.html",
+    "slug": "cloud-devops",
+    "alias": "/capabilities/enterprise-engineering/cloud-devops",
+    "title": "Cloud, DevOps & Platform Engineering",
+    "group": "engineering",
+    "description": "",
+    "html_file": "cloud-devops.html",
+    "css_file": "cloud-devops.css"
+  },
+  {
+    "source": "05_Enterprise_Engineering/growibes-continuous-engineering-support-award.html",
+    "slug": "continuous-engineering",
+    "alias": "/capabilities/enterprise-engineering/continuous-engineering",
+    "title": "Continuous Engineering & Support",
+    "group": "engineering",
+    "description": "",
+    "html_file": "continuous-engineering.html",
+    "css_file": "continuous-engineering.css"
+  },
+  {
+    "source": "06_Strategy_and_Architecture/growibes-strategy-transformation-award.html",
+    "slug": "strategy",
+    "alias": "/strategy",
+    "title": "Strategy & Transformation",
+    "group": "strategy",
+    "description": "",
+    "html_file": "strategy.html",
+    "css_file": "strategy.css"
+  },
+  {
+    "source": "06_Strategy_and_Architecture/technical-discovery-free-14-day-sprint.html",
+    "slug": "technical-discovery",
+    "alias": "/strategy/technical-discovery",
+    "title": "Technical Discovery",
+    "group": "strategy",
+    "description": "Bring Growibes the difficult part. Technical discovery for enterprise Drupal, AI, integrations, migrations, security, performance and architecture.",
+    "html_file": "technical-discovery.html",
+    "css_file": "technical-discovery.css"
+  },
+  {
+    "source": "07_Agency_Partnerships/agency-partnerships.html",
+    "slug": "agencies",
+    "alias": "/agency-partnerships",
+    "title": "Agency Partnerships",
+    "group": "agencies",
+    "description": "Growibes agency partnerships: senior Drupal and AI engineering capacity delivered behind your agency brand, with white-label, co-delivery and technical partnership models.",
+    "html_file": "agencies.html",
+    "css_file": "agencies.css"
+  },
+  {
+    "source": "08_Case_Studies/growibes-case-studies.html",
+    "slug": "work",
+    "alias": "/work",
+    "title": "Work / Case Studies",
+    "group": "work",
+    "description": "Selected enterprise Drupal, platform and digital engineering work by Growibes.",
+    "html_file": "work.html",
+    "css_file": "work.css"
+  },
+  {
+    "source": "08_Case_Studies/wso2-case-study.html",
+    "slug": "wso2",
+    "alias": "/work/wso2",
+    "title": "WSO2",
+    "group": "work",
+    "description": "A Growibes case study: enterprise Drupal for a globally distributed developer audience.",
+    "html_file": "wso2.html",
+    "css_file": "wso2.css"
+  },
+  {
+    "source": "08_Case_Studies/sph-case-study.html",
+    "slug": "sph",
+    "alias": "/work/singapore-press-holdings",
+    "title": "Singapore Press Holdings",
+    "group": "work",
+    "description": "Singapore Press Holdings case study \u2014 multi-site Drupal architecture, editorial workflows and content governance.",
+    "html_file": "sph.html",
+    "css_file": "sph.css"
+  },
+  {
+    "source": "08_Case_Studies/fosroc-case-study.html",
+    "slug": "fosroc",
+    "alias": "/work/fosroc",
+    "title": "Fosroc Australia",
+    "group": "work",
+    "description": "Fosroc Australia case study \u2014 structured Drupal resource library, technical documents, search, mobile-first delivery and accessibility.",
+    "html_file": "fosroc.html",
+    "css_file": "fosroc.css"
+  },
+  {
+    "source": "08_Case_Studies/ibp-case-study.html",
+    "slug": "ibp",
+    "alias": "/work/international-budget-partnership",
+    "title": "International Budget Partnership",
+    "group": "work",
+    "description": "International Budget Partnership case study \u2014 prior agency experience involving structured country profiles, progress indicators, linked resources, accessibility and multilingual Drupal.",
+    "html_file": "ibp.html",
+    "css_file": "ibp.css"
+  },
+  {
+    "source": "08_Case_Studies/confidential-enterprise-platform-case-study.html",
+    "slug": "confidential-enterprise",
+    "alias": "/work/confidential-enterprise-platform",
+    "title": "Confidential Enterprise Platform",
+    "group": "work",
+    "description": "A confidential Growibes enterprise engineering case study. Client identity and engagement-specific details withheld under NDA; architecture story presented only at the level permitted for public disclosure.",
+    "html_file": "confidential-enterprise.html",
+    "css_file": "confidential-enterprise.css"
+  },
+  {
+    "source": "09_Himalayan_Story/growibes-himalayan-story-v3.html",
+    "slug": "our-story",
+    "alias": "/why-growibes/himalayan-story",
+    "title": "Himalayan Story",
+    "group": "story",
+    "description": "",
+    "html_file": "our-story.html",
+    "css_file": "our-story.css"
+  },
+  {
+    "source": "10_Brand_and_Design_System/growibes-brand-system-v1.html",
+    "slug": "brand",
+    "alias": "/brand",
+    "title": "Brand System",
+    "group": "brand",
+    "description": "",
+    "html_file": "brand.html",
+    "css_file": "brand.css"
+  }
+]

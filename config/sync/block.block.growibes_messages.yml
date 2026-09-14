@@ -1,0 +1,22 @@
+uuid: 9492b804-e265-46d7-8a3d-018a938784f2
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - growibes
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: growibes_messages
+theme: growibes
+region: highlighted
+weight: -5
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 9ab3cd4d-9f07-4cbb-9a80-7fe4e608bec7
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - growibes
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: growibes_content
+theme: growibes
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

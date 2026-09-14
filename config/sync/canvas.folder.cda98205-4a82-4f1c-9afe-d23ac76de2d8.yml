@@ -1,0 +1,15 @@
+uuid: cda98205-4a82-4f1c-9afe-d23ac76de2d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.navigation.message
+    - canvas.component.sdc.navigation.title
+    - canvas.component.sdc.olivero.teaser
+name: Other
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.navigation.message
+  - sdc.navigation.title
+  - sdc.olivero.teaser

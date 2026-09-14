@@ -1,0 +1,25 @@
+name: Growibes
+type: theme
+base theme: false
+description: 'Growibes production theme.'
+package: Growibes
+core_version_requirement: ^11
+version: 1.0.0
+
+libraries:
+  - growibes/fonts
+  - growibes/global-styling
+
+regions:
+  header: Header
+  highlighted: Highlighted
+  status: Status messages
+  content: Content
+  footer: Footer
+
+components:
+  namespaces:
+    growibes:
+      - components
+
+logo: logo.svg

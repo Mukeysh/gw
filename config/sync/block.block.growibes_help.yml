@@ -1,0 +1,22 @@
+uuid: 41b71039-17b3-47cb-9bd6-125a4b5623fe
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - growibes
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: growibes_help
+theme: growibes
+region: header
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

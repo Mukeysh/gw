@@ -1,0 +1,22 @@
+uuid: 9cdf1708-5f58-455d-9e82-1861d6cbf740
+langcode: en
+status: true
+dependencies:
+  theme:
+    - growibes
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: growibes_primary_local_tasks
+theme: growibes
+region: highlighted
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Primary tabs'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

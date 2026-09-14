@@ -1,0 +1,5 @@
+services:
+  growibes_canvas.alias_redirect:
+    class: Drupal\growibes_canvas\EventSubscriber\AliasRedirectSubscriber
+    tags:
+      - { name: event_subscriber }

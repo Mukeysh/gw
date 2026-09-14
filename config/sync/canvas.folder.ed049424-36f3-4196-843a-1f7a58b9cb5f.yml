@@ -1,0 +1,11 @@
+uuid: ed049424-36f3-4196-843a-1f7a58b9cb5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.growibes.html
+name: Pages
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.growibes.html

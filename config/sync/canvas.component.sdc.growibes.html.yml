@@ -1,0 +1,128 @@
+uuid: dfde7787-bdea-43aa-91df-4532f3b1dd9c
+langcode: en
+status: true
+dependencies:
+  theme:
+    - growibes
+active_version: 74fe0d1099478404
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        html:
+          required: false
+          field_type: string_long
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textarea
+          default_value:
+            -
+              value: |
+                <section class="hero">
+                  <div class="container">
+                    <div class="eyebrow">Growibes / Enterprise Digital Engineering</div>
+                    <h1>Where <em>enterprise Drupal</em> becomes an intelligent platform.</h1>
+                  </div>
+                </section>
+          expression: ℹ︎string_long␟value
+          derived_schema_metadata: {  }
+        css:
+          required: false
+          field_type: string_long
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textarea
+          default_value:
+            -
+              value: |
+                .hero{min-height:1020px;padding:170px 0 90px;background:#08090c;color:#fff}
+                .eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.18em;font-weight:800;color:#7f8691}
+                .hero h1{font-size:clamp(68px,9.5vw,150px);line-height:.79;letter-spacing:-.09em}
+                .hero h1 em{font-style:normal;color:#9ea9ff}
+          expression: ℹ︎string_long␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+  bd96651f87186675:
+    settings:
+      prop_field_definitions:
+        html:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: |
+                <section class="hero">
+                  <div class="container">
+                    <div class="eyebrow">Growibes / Enterprise Digital Engineering</div>
+                    <h1>Where <em>enterprise Drupal</em> becomes an intelligent platform.</h1>
+                  </div>
+                </section>
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+        css:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: |
+                .hero{min-height:1020px;padding:170px 0 90px;background:#08090c;color:#fff}
+                .eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.18em;font-weight:800;color:#7f8691}
+                .hero h1{font-size:clamp(68px,9.5vw,150px);line-height:.79;letter-spacing:-.09em}
+                .hero h1 em{font-style:normal;color:#9ea9ff}
+          expression: ℹ︎string␟value
+          derived_schema_metadata: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+  f633ffbc93cedb28:
+    settings:
+      prop_field_definitions:
+        html:
+          required: false
+          field_type: string_long
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textarea
+          default_value:
+            -
+              value: |
+                <section class="hero">
+                  <div class="container">
+                    <div class="eyebrow">Growibes / Enterprise Digital Engineering</div>
+                    <h1>Where <em>enterprise Drupal</em> becomes an intelligent platform.</h1>
+                  </div>
+                </section>
+          expression: ℹ︎string_long␟value
+          derived_schema_metadata:
+            string_shape:
+              pattern: '(.|\r?\n)*'
+        css:
+          required: false
+          field_type: string_long
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textarea
+          default_value:
+            -
+              value: |
+                .hero{min-height:1020px;padding:170px 0 90px;background:#08090c;color:#fff}
+                .eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.18em;font-weight:800;color:#7f8691}
+                .hero h1{font-size:clamp(68px,9.5vw,150px);line-height:.79;letter-spacing:-.09em}
+                .hero h1 em{font-style:normal;color:#9ea9ff}
+          expression: ℹ︎string_long␟value
+          derived_schema_metadata:
+            string_shape:
+              pattern: '(.|\r?\n)*'
+    fallback_metadata:
+      slot_definitions: {  }
+label: HTML
+id: sdc.growibes.html
+provider: growibes
+source: sdc
+source_local_id: 'growibes:html'

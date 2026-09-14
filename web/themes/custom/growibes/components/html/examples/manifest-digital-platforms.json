@@ -1,0 +1,72 @@
+[
+  {
+    "source": "01_Digital_Platforms/growibes-enterprise-digital-platforms-award.html",
+    "slug": "digital-platforms",
+    "alias": "/digital-platforms",
+    "title": "Enterprise Digital Platforms",
+    "group": "digital-platforms",
+    "description": "",
+    "html_file": "digital-platforms.html",
+    "css_file": "digital-platforms.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-enterprise-drupal-award.html",
+    "slug": "enterprise-drupal",
+    "alias": "/digital-platforms/enterprise-drupal",
+    "title": "Enterprise Drupal",
+    "group": "digital-platforms",
+    "description": "Enterprise Drupal architecture, modernization and engineering for platforms where content, integrations, governance and business continuity matter.",
+    "html_file": "enterprise-drupal.html",
+    "css_file": "enterprise-drupal.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-migrations-award.html",
+    "slug": "migrations",
+    "alias": "/digital-platforms/migrations",
+    "title": "Migration & Platform Modernization",
+    "group": "digital-platforms",
+    "description": "Enterprise Drupal migration and platform modernization without losing content, search equity, workflows or business continuity.",
+    "html_file": "migrations.html",
+    "css_file": "migrations.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-multisite-multibrand-award.html",
+    "slug": "multisite",
+    "alias": "/digital-platforms/multisite",
+    "title": "Multisite & Multi-brand",
+    "group": "digital-platforms",
+    "description": "",
+    "html_file": "multisite.html",
+    "css_file": "multisite.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-global-multilingual-award.html",
+    "slug": "multilingual",
+    "alias": "/digital-platforms/multilingual",
+    "title": "Global & Multilingual Drupal",
+    "group": "digital-platforms",
+    "description": "",
+    "html_file": "multilingual.html",
+    "css_file": "multilingual.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-content-governance-award.html",
+    "slug": "content-governance",
+    "alias": "/digital-platforms/content-governance",
+    "title": "Content Governance",
+    "group": "digital-platforms",
+    "description": "",
+    "html_file": "content-governance.html",
+    "css_file": "content-governance.css"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-digital-asset-management-award.html",
+    "slug": "digital-asset-management",
+    "alias": "/digital-platforms/digital-asset-management",
+    "title": "Digital Asset Management",
+    "group": "digital-platforms",
+    "description": "",
+    "html_file": "digital-asset-management.html",
+    "css_file": "digital-asset-management.css"
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "source": "01_Digital_Platforms/growibes-enterprise-digital-platforms-award.html",
+    "slug": "digital-platforms",
+    "alias": "/capabilities/digital-platforms",
+    "title": "Enterprise Digital Platforms",
+    "group": "digital-platforms"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-enterprise-drupal-award.html",
+    "slug": "enterprise-drupal",
+    "alias": "/capabilities/digital-platforms/enterprise-drupal",
+    "title": "Enterprise Drupal",
+    "group": "digital-platforms"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-migrations-award.html",
+    "slug": "migrations",
+    "alias": "/capabilities/digital-platforms/migration-modernization",
+    "title": "Migration & Platform Modernization",
+    "group": "digital-platforms"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-multisite-multibrand-award.html",
+    "slug": "multisite",
+    "alias": "/capabilities/digital-platforms/multisite-multibrand",
+    "title": "Multisite & Multi-brand",
+    "group": "digital-platforms"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-global-multilingual-award.html",
+    "slug": "multilingual",
+    "alias": "/capabilities/digital-platforms/global-multilingual",
+    "title": "Global & Multilingual Drupal",
+    "group": "digital-platforms"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-content-governance-award.html",
+    "slug": "content-governance",
+    "alias": "/capabilities/digital-platforms/content-governance",
+    "title": "Content Governance",
+    "group": "digital-platforms"
+  },
+  {
+    "source": "01_Digital_Platforms/growibes-digital-asset-management-award.html",
+    "slug": "digital-asset-management",
+    "alias": "/capabilities/digital-platforms/digital-asset-management",
+    "title": "Digital Asset Management",
+    "group": "digital-platforms"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-personalization-digital-experience-award.html",
+    "slug": "personalization",
+    "alias": "/capabilities/experience-growth/personalization",
+    "title": "Personalization",
+    "group": "experience"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-analytics-optimization-award.html",
+    "slug": "analytics",
+    "alias": "/capabilities/experience-growth/analytics-optimization",
+    "title": "Analytics & Optimization",
+    "group": "experience"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-commerce-digital-experience-award.html",
+    "slug": "commerce",
+    "alias": "/capabilities/experience-growth/commerce",
+    "title": "Commerce & Digital Revenue",
+    "group": "experience"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-seo-aeo-ai-visibility-award.html",
+    "slug": "seo-aeo",
+    "alias": "/capabilities/experience-growth/seo-aeo-ai-visibility",
+    "title": "SEO, AEO & AI Visibility",
+    "group": "experience"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-marketing-automation-lead-generation-award.html",
+    "slug": "marketing-automation",
+    "alias": "/capabilities/experience-growth/marketing-automation",
+    "title": "Marketing Automation & Lead Generation",
+    "group": "experience"
+  },
+  {
+    "source": "02_Experience_and_Growth/growibes-design-systems-experience-engineering-award.html",
+    "slug": "design-systems",
+    "alias": "/capabilities/experience-growth/design-systems",
+    "title": "Design Systems & Experience Engineering",
+    "group": "experience"
+  },
+  {
+    "source": "03_Intelligent_Enterprise/growibes-intelligent-enterprise-ai-platform-award.html",
+    "slug": "intelligent-enterprise",
+    "alias": "/capabilities/intelligent-enterprise",
+    "title": "Intelligent Enterprise",
+    "group": "intelligent-enterprise"
+  },
+  {
+    "source": "03_Intelligent_Enterprise/growibes-drupal-ai-award.html",
+    "slug": "drupal-ai",
+    "alias": "/capabilities/intelligent-enterprise/drupal-ai",
+    "title": "Drupal AI",
+    "group": "intelligent-enterprise"
+  },
+  {
+    "source": "03_Intelligent_Enterprise/growibes-intelligent-enterprise-ai.html",
+    "slug": "intelligent-enterprise-ai",
+    "alias": "/capabilities/intelligent-enterprise/ai-agents",
+    "title": "Intelligent Enterprise AI",
+    "group": "intelligent-enterprise"
+  },
+  {
+    "source": "03_Intelligent_Enterprise/growibes-sovereign-core.html",
+    "slug": "sovereign-core",
+    "alias": "/capabilities/intelligent-enterprise/sovereign-core",
+    "title": "Sovereign CORE",
+    "group": "intelligent-enterprise"
+  },
+  {
+    "source": "04_Connected_Enterprise/growibes-connected-enterprise.html",
+    "slug": "connected-enterprise",
+    "alias": "/capabilities/connected-enterprise",
+    "title": "Connected Enterprise",
+    "group": "connected-enterprise"
+  },
+  {
+    "source": "04_Connected_Enterprise/growibes-integrations-api-award.html",
+    "slug": "integrations",
+    "alias": "/capabilities/connected-enterprise/integrations",
+    "title": "API & Enterprise Integrations",
+    "group": "connected-enterprise"
+  },
+  {
+    "source": "04_Connected_Enterprise/growibes-headless-api-first-award.html",
+    "slug": "headless",
+    "alias": "/capabilities/connected-enterprise/headless-api-first",
+    "title": "Headless & API-First",
+    "group": "connected-enterprise"
+  },
+  {
+    "source": "04_Connected_Enterprise/growibes-connected-enterprise-api-integration-composable-award.html",
+    "slug": "connected-apis",
+    "alias": "/capabilities/connected-enterprise/composable",
+    "title": "APIs, Integrations & Composable Architecture",
+    "group": "connected-enterprise"
+  },
+  {
+    "source": "05_Enterprise_Engineering/digital-trust-security-center.html",
+    "slug": "digital-trust",
+    "alias": "/capabilities/enterprise-engineering/security",
+    "title": "Digital Trust",
+    "group": "engineering"
+  },
+  {
+    "source": "05_Enterprise_Engineering/growibes-security-performance-award-v2.html",
+    "slug": "security-performance",
+    "alias": "/capabilities/enterprise-engineering/performance",
+    "title": "Security & Performance",
+    "group": "engineering"
+  },
+  {
+    "source": "05_Enterprise_Engineering/growibes-cloud-devops-platform-engineering-award.html",
+    "slug": "cloud-devops",
+    "alias": "/capabilities/enterprise-engineering/cloud-devops",
+    "title": "Cloud, DevOps & Platform Engineering",
+    "group": "engineering"
+  },
+  {
+    "source": "05_Enterprise_Engineering/growibes-continuous-engineering-support-award.html",
+    "slug": "continuous-engineering",
+    "alias": "/capabilities/enterprise-engineering/continuous-engineering",
+    "title": "Continuous Engineering & Support",
+    "group": "engineering"
+  },
+  {
+    "source": "06_Strategy_and_Architecture/growibes-strategy-transformation-award.html",
+    "slug": "strategy",
+    "alias": "/strategy",
+    "title": "Strategy & Transformation",
+    "group": "strategy"
+  },
+  {
+    "source": "06_Strategy_and_Architecture/technical-discovery-free-14-day-sprint.html",
+    "slug": "technical-discovery",
+    "alias": "/strategy/technical-discovery",
+    "title": "Technical Discovery",
+    "group": "strategy"
+  },
+  {
+    "source": "07_Agency_Partnerships/agency-partnerships.html",
+    "slug": "agencies",
+    "alias": "/agency-partnerships",
+    "title": "Agency Partnerships",
+    "group": "agencies"
+  },
+  {
+    "source": "08_Case_Studies/growibes-case-studies.html",
+    "slug": "work",
+    "alias": "/work",
+    "title": "Work / Case Studies",
+    "group": "work"
+  },
+  {
+    "source": "08_Case_Studies/wso2-case-study.html",
+    "slug": "wso2",
+    "alias": "/work/wso2",
+    "title": "WSO2",
+    "group": "work"
+  },
+  {
+    "source": "08_Case_Studies/sph-case-study.html",
+    "slug": "sph",
+    "alias": "/work/singapore-press-holdings",
+    "title": "Singapore Press Holdings",
+    "group": "work"
+  },
+  {
+    "source": "08_Case_Studies/fosroc-case-study.html",
+    "slug": "fosroc",
+    "alias": "/work/fosroc",
+    "title": "Fosroc Australia",
+    "group": "work"
+  },
+  {
+    "source": "08_Case_Studies/ibp-case-study.html",
+    "slug": "ibp",
+    "alias": "/work/international-budget-partnership",
+    "title": "International Budget Partnership",
+    "group": "work"
+  },
+  {
+    "source": "08_Case_Studies/confidential-enterprise-platform-case-study.html",
+    "slug": "confidential-enterprise",
+    "alias": "/work/confidential-enterprise-platform",
+    "title": "Confidential Enterprise Platform",
+    "group": "work"
+  },
+  {
+    "source": "09_Himalayan_Story/growibes-himalayan-story-v3.html",
+    "slug": "our-story",
+    "alias": "/why-growibes/himalayan-story",
+    "title": "Himalayan Story",
+    "group": "story"
+  },
+  {
+    "source": "10_Brand_and_Design_System/growibes-brand-system-v1.html",
+    "slug": "brand",
+    "alias": "/brand",
+    "title": "Brand System",
+    "group": "brand"
+  }
+]

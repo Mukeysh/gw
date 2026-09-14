@@ -1,0 +1,27 @@
+fonts:
+  css:
+    base:
+      'https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@400;500;600;700;800&display=swap':
+        type: external
+        minified: true
+
+global-styling:
+  version: 1.2.5
+  css:
+    base:
+      css/global.css: {}
+    theme:
+      components/header/header.css: {}
+      components/footer/footer.css: {}
+  js:
+    js/growibes.js:
+      attributes:
+        defer: true
+  dependencies:
+    - growibes/fonts
+    - core/drupal
+    - core/once
+
+global:
+  dependencies:
+    - growibes/global-styling

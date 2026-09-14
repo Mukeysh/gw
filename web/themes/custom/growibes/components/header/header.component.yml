@@ -1,0 +1,36 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Header
+status: stable
+group: Global
+description: 'Fixed homepage-final site header — GROWIBES wordmark, primary nav, and architect CTA.'
+props:
+  type: object
+  properties:
+    logo_href:
+      type: string
+      title: Logo href
+      default: /
+      format: uri-reference
+      examples:
+        - /
+    cta_label:
+      type: string
+      title: CTA label
+      default: Talk to a Senior Architect
+      examples:
+        - Talk to a Senior Architect
+    cta_href:
+      type: string
+      title: CTA href
+      default: /#contact
+      format: uri-reference
+      examples:
+        - /#contact
+        - mailto:hello@growibes.com
+slots:
+  navigation:
+    title: Navigation
+    description: Optional. Leave empty to use the homepage-final links.
+libraryOverrides:
+  dependencies:
+    - growibes/global

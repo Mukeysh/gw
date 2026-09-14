@@ -1,0 +1,33 @@
+{#
+/**
+ * @file
+ * Growibes page.html.twig.
+ *
+ * Header and footer are global (homepage-final). Unique page HTML lives in
+ * the content region via the growibes:html SDC.
+ */
+#}
+<div class="layout-container">
+  {% if page.header %}
+    <div class="gw-page-header" role="banner">
+      {{ page.header }}
+    </div>
+  {% endif %}
+
+  {% if page.highlighted %}
+    <div class="gw-status">{{ page.highlighted }}</div>
+  {% endif %}
+  {% if page.status %}
+    <div class="gw-status">{{ page.status }}</div>
+  {% endif %}
+
+  <main id="main-content" class="gw-page-main" role="main" tabindex="-1">
+    {{ page.content }}
+  </main>
+
+  {% if page.footer %}
+    <div class="gw-page-footer" role="contentinfo">
+      {{ page.footer }}
+    </div>
+  {% endif %}
+</div>

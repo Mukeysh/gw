@@ -1,0 +1,22 @@
+uuid: 7a206e2c-05f6-4df0-9c4d-d9de6a0f94b9
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - growibes
+_core:
+  default_config_hash: eYL19CLDyinGTWYQfBD1DswWzglEotE_kHnHx3AxTXM
+id: growibes_powered
+theme: growibes
+region: header
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

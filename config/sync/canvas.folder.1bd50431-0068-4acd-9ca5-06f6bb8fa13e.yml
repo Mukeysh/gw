@@ -1,0 +1,13 @@
+uuid: 1bd50431-0068-4acd-9ca5-06f6bb8fa13e
+langcode: en
+status: true
+dependencies:
+  config:
+    - canvas.component.sdc.growibes.footer
+    - canvas.component.sdc.growibes.header
+name: Global
+configEntityTypeId: component
+weight: 0
+items:
+  - sdc.growibes.footer
+  - sdc.growibes.header

@@ -1,0 +1,42 @@
+uuid: ec3c7424-346a-4c19-ae5e-39f14c1e3fff
+langcode: en
+status: true
+dependencies:
+  theme:
+    - growibes
+active_version: ecd18fb78706faaf
+versioned_properties:
+  active:
+    settings:
+      prop_field_definitions:
+        brand:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: GROWIBES
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        tagline:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Enterprise digital engineering for the Drupal + AI era.'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+    fallback_metadata:
+      slot_definitions: {  }
+label: Footer
+id: sdc.growibes.footer
+provider: growibes
+source: sdc
+source_local_id: 'growibes:footer'
