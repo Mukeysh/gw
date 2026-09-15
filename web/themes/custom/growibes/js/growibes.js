@@ -167,11 +167,219 @@
     });
   };
 
+  const visibleClients = () => {
+    const width = window.innerWidth;
+    if (width <= 600) {
+      return 1;
+    }
+    if (width <= 950) {
+      return 2;
+    }
+    return 4;
+  };
+
+  const initClientCarousel = (scope) => {
+    if (!scope || !scope.querySelectorAll) {
+      return;
+    }
+    scope.querySelectorAll("[data-client-carousel]").forEach((carousel) => {
+      if (carousel.dataset.gwReady === "1") {
+        return;
+      }
+      carousel.dataset.gwReady = "1";
+
+      const viewport = carousel.querySelector(".client-viewport");
+      const track = carousel.querySelector(".clientgrid");
+      const prev = carousel.querySelector(".client-nav--prev");
+      const next = carousel.querySelector(".client-nav--next");
+      if (!viewport || !track) {
+        return;
+      }
+
+      const originals = Array.from(track.children);
+      const total = originals.length;
+      if (!total) {
+        return;
+      }
+      originals.forEach((node) => track.appendChild(node.cloneNode(true)));
+
+      const gap = 10;
+      let index = 0;
+      let timer = null;
+      let hovering = false;
+      const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const itemWidth = () => {
+        const visible = visibleClients();
+        return (viewport.clientWidth - gap * (visible - 1)) / visible;
+      };
+
+      const layout = () => {
+        const width = itemWidth();
+        Array.from(track.children).forEach((item) => {
+          item.style.flex = `0 0 ${width}px`;
+          item.style.maxWidth = `${width}px`;
+        });
+        goTo(index, false);
+      };
+
+      const goTo = (nextIndex, animate) => {
+        index = nextIndex;
+        track.style.transition = animate && !reduce ? "transform .45s cubic-bezier(.2,.8,.2,1)" : "none";
+        const offset = index * (itemWidth() + gap);
+        track.style.transform = `translateX(-${offset}px)`;
+      };
+
+      const nextSlide = () => {
+        goTo(index + 1, true);
+        if (index >= total) {
+          window.setTimeout(() => goTo(index - total, false), reduce ? 0 : 460);
+        }
+      };
+
+      const prevSlide = () => {
+        if (index <= 0) {
+          goTo(total, false);
+          window.requestAnimationFrame(() => {
+            window.requestAnimationFrame(() => goTo(total - 1, true));
+          });
+          return;
+        }
+        goTo(index - 1, true);
+      };
+
+      const stop = () => {
+        if (timer) {
+          window.clearInterval(timer);
+          timer = null;
+        }
+      };
+
+      const play = () => {
+        stop();
+        if (reduce || hovering) {
+          return;
+        }
+        timer = window.setInterval(nextSlide, 3200);
+      };
+
+      prev?.addEventListener("click", () => {
+        prevSlide();
+        play();
+      });
+      next?.addEventListener("click", () => {
+        nextSlide();
+        play();
+      });
+      carousel.addEventListener("mouseenter", () => {
+        hovering = true;
+        stop();
+      });
+      carousel.addEventListener("mouseleave", () => {
+        hovering = false;
+        play();
+      });
+      carousel.addEventListener("focusin", stop);
+      carousel.addEventListener("focusout", play);
+
+      let startX = 0;
+      viewport.addEventListener("pointerdown", (event) => {
+        startX = event.clientX;
+      });
+      viewport.addEventListener("pointerup", (event) => {
+        const delta = event.clientX - startX;
+        if (Math.abs(delta) < 40) {
+          return;
+        }
+        delta < 0 ? nextSlide() : prevSlide();
+        play();
+      });
+
+      window.addEventListener("resize", layout);
+      layout();
+      play();
+    });
+  };
+
+  const headerOffset = () => {
+    const header = document.querySelector(".gw-header");
+    return header ? header.getBoundingClientRect().height + 24 : 88;
+  };
+
+  const findPageId = (id) => {
+    if (!id) {
+      return null;
+    }
+    const light = document.getElementById(id);
+    if (light) {
+      return light;
+    }
+    for (const el of document.querySelectorAll(".gw-html")) {
+      const found = el.shadowRoot && el.shadowRoot.getElementById(id);
+      if (found) {
+        return found;
+      }
+    }
+    return null;
+  };
+
+  const scrollToPageId = (id) => {
+    const target = findPageId(id);
+    if (!target) {
+      return false;
+    }
+    const top = target.getBoundingClientRect().top + window.scrollY - headerOffset();
+    window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+    return true;
+  };
+
+  const boundHashRoots = new WeakSet();
+  const bindHashLinks = (root) => {
+    if (!root || boundHashRoots.has(root)) {
+      return;
+    }
+    boundHashRoots.add(root);
+    root.addEventListener("click", (event) => {
+      const link = event.target.closest && event.target.closest('a[href^="#"]');
+      if (!link) {
+        return;
+      }
+      const href = link.getAttribute("href");
+      if (!href || href === "#") {
+        return;
+      }
+      const id = decodeURIComponent(href.slice(1));
+      if (scrollToPageId(id)) {
+        event.preventDefault();
+        if (history.replaceState) {
+          history.replaceState(null, "", href);
+        }
+      }
+    });
+  };
+
+  const scrollFromLocationHash = () => {
+    if (!location.hash || location.hash === "#") {
+      return;
+    }
+    scrollToPageId(decodeURIComponent(location.hash.slice(1)));
+  };
+
   const attach = (context) => {
     const root = context && context.querySelectorAll ? context : document;
-    root.querySelectorAll(".gw-html").forEach(mountHtmlIsland);
+    root.querySelectorAll(".gw-html").forEach((el) => {
+      mountHtmlIsland(el);
+      if (el.shadowRoot) {
+        initClientCarousel(el.shadowRoot);
+        bindHashLinks(el.shadowRoot);
+      }
+    });
     if (context && context.classList && context.classList.contains("gw-html")) {
       mountHtmlIsland(context);
+      if (context.shadowRoot) {
+        initClientCarousel(context.shadowRoot);
+        bindHashLinks(context.shadowRoot);
+      }
     }
     root.querySelectorAll(".gw-header").forEach(initHeaderMenu);
     if (context && context.classList && context.classList.contains("gw-header")) {
@@ -188,4 +396,7 @@
   }
 
   attach(document);
+  window.addEventListener("hashchange", scrollFromLocationHash);
+  window.addEventListener("load", scrollFromLocationHash);
+  window.setTimeout(scrollFromLocationHash, 50);
 })();
