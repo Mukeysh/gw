@@ -6,11 +6,13 @@
  */
 #}
 <header{{ attributes.addClass('gw-header') }}>
-  <a class="gw-logo" href="{{ logo_href|default('/') }}">GROW<i>IBES</i></a>
+  <a class="gw-logo" href="{{ logo_href|default('/') }}">
+    <img src="{{ logo_src|default('/themes/custom/growibes/logo.jpeg') }}" alt="Growibes" width="168" height="56">
+  </a>
   <nav class="gw-header__links" aria-label="{{ 'Primary'|t }}">
     {{ navigation }}
   </nav>
-  <a class="gw-header__cta" href="{{ cta_href|default('/contact') }}">{{ cta_label|default('Talk to a Senior Architect') }}</a>
+  <a class="gw-header__cta" href="{{ cta_href|default('/contact') }}">{{ cta_label|default('Talk to an Architect') }}</a>
   <button type="button" class="gw-header__toggle" aria-expanded="false" aria-label="{{ 'Open menu'|t }}">
     <span aria-hidden="true"></span>
   </button>

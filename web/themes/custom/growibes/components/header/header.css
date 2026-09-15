@@ -21,15 +21,18 @@
 }
 
 .gw-logo {
-  font-weight: 950;
-  letter-spacing: -0.075em;
-  font-size: 16px;
   flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  line-height: 0;
 }
 
-.gw-logo i {
-  font-style: normal;
-  color: var(--cyan);
+.gw-logo img {
+  display: block;
+  height: 40px;
+  width: auto;
+  max-width: 168px;
+  mix-blend-mode: screen;
 }
 
 .gw-header__links {
@@ -249,6 +252,11 @@ body.toolbar-horizontal.toolbar-tray-open .gw-header {
 }
 
 @media (max-width: 1080px) {
+  .gw-logo img {
+    height: 32px;
+    max-width: 136px;
+  }
+
   .gw-header__links {
     display: none;
   }

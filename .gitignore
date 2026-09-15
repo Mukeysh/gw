@@ -36,6 +36,11 @@ $RECYCLE.BIN/
 # PHP scripts scaffolded into the web root by Drupal core.
 /web/*.php
 
+# Theme build helpers: extracted page HTML/CSS and one-off scripts.
+# Keep locally to rebuild Canvas pages; not needed at runtime.
+/web/themes/custom/growibes/components/html/examples/
+/web/themes/custom/growibes/scripts/
+
 # Project-level authentication and authorization credentials for Composer.
 # Per https://getcomposer.org/doc/articles/authentication-for-private-packages.md#authentication-in-auth-json-per-project,
 # this should never be under version control.

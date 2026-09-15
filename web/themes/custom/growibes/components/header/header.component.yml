@@ -13,6 +13,13 @@ props:
       format: uri-reference
       examples:
         - /
+    logo_src:
+      type: string
+      title: Logo image URL
+      default: /themes/custom/growibes/logo.jpeg
+      format: uri-reference
+      examples:
+        - /themes/custom/growibes/logo.jpeg
     cta_label:
       type: string
       title: CTA label
