@@ -189,6 +189,13 @@
     "group": "strategy"
   },
   {
+    "source": "06_Strategy_and_Architecture/growibes-enterprise-architecture-award-v3.html",
+    "slug": "enterprise-architecture",
+    "alias": "/strategy/enterprise-architecture",
+    "title": "Enterprise Architecture",
+    "group": "strategy"
+  },
+  {
     "source": "07_Agency_Partnerships/agency-partnerships.html",
     "slug": "agencies",
     "alias": "/agency-partnerships",

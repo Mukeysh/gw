@@ -22,10 +22,10 @@ props:
     cta_href:
       type: string
       title: CTA href
-      default: /#contact
+      default: /contact
       format: uri-reference
       examples:
-        - /#contact
+        - /contact
         - mailto:hello@growibes.com
 slots:
   navigation:

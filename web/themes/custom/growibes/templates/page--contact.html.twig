@@ -1,0 +1,200 @@
+{#
+/**
+ * @file
+ * Contact page — production contact design with a real Drupal Webform.
+ */
+#}
+<div class="layout-container">
+  {% if page.header %}
+    <div class="gw-page-header" role="banner">
+      {{ page.header }}
+    </div>
+  {% endif %}
+
+  <main id="main-content" class="gw-page-main gw-contact" role="main" tabindex="-1">
+    <header class="hero">
+      <div class="wrap">
+        <div class="kicker">Growibes / Enterprise digital engineering · Dharamshala</div>
+        <h1>Bring us the<br><em>difficult part.</em></h1>
+        <p class="dek">A platform under pressure. A modernization decision you cannot get wrong. An AI opportunity that needs engineering discipline. Tell us what is at stake — and let the right senior people enter the problem with you.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#form">Tell us what's under pressure ↗</a>
+          <a class="btn ghost" href="#offices">Find Growibes</a>
+        </div>
+      </div>
+      <div class="constellation" aria-hidden="true">
+        <div class="orbit"></div>
+        <div class="orbit two"></div>
+        <div class="core"><b>GROWIBES<br>ENGINEERING</b></div>
+        <div class="node n1">PLATFORM</div>
+        <div class="node n2">AI / DATA</div>
+        <div class="node n3">ARCHITECTURE</div>
+        <div class="node n4">DELIVERY</div>
+        <div class="node n5">TRUST</div>
+      </div>
+    </header>
+
+    <section class="signal">
+      <div class="wrap signalgrid">
+        <div class="sig"><b>Real problem first</b><span>Start with the business pressure, not a generic sales brief.</span></div>
+        <div class="sig"><b>Senior thinking</b><span>Route the conversation toward the people who can shape the solution.</span></div>
+        <div class="sig"><b>Proof before scale</b><span>Ask about the free 14-day engineering sprint on a real problem.</span></div>
+        <div class="sig"><b>Privacy by design</b><span>Purpose-limited collection, separate marketing choice and clear privacy information.</span></div>
+      </div>
+    </section>
+
+    <section class="contact-panel" id="form">
+      <div class="wrap contactgrid">
+        <aside class="side">
+          <div class="kicker" style="color:#2869cf">01 / Start with the pressure</div>
+          <h2>Make the first conversation worth having.</h2>
+          <p>Enterprise buyers do not need another generic “discovery call.” They need to know whether the team across the table understands the consequences of the decision.</p>
+          <p>Give us the difficult part. The more useful the problem, the more useful the first response can be.</p>
+          <div class="psych">
+            <strong>Want to reduce the risk of the decision?</strong>
+            <span>Ask us to work on a real problem through the free 14-day engineering sprint. The first conversation can be about evidence, not persuasion.</span>
+          </div>
+          <div class="proofmini">
+            <div><b>50+</b><span>Projects launched</span></div>
+            <div><b>98%</b><span>Client retention</span></div>
+            <div><b>48H</b><span>Senior embedding</span></div>
+            <div><b>14 DAYS</b><span>Real engineering · Free</span></div>
+          </div>
+        </aside>
+        <div class="gw-contact-form-wrap">
+          <div class="formhead">
+            <h2>Tell us what is under pressure.</h2>
+            <div class="required">* Required</div>
+          </div>
+          {% if page.highlighted %}
+            <div class="gw-status">{{ page.highlighted }}</div>
+          {% endif %}
+          {% if page.status %}
+            <div class="gw-status">{{ page.status }}</div>
+          {% endif %}
+          {{ page.content }}
+        </div>
+      </div>
+    </section>
+
+    <section class="after">
+      <div class="wrap aftergrid">
+        <div>
+          <div class="kicker">02 / What happens next</div>
+          <h2>Good conversations<br>create <em>momentum.</em></h2>
+          <p>The goal is not to manufacture a sales call. It is to reduce uncertainty around a real engineering decision and determine whether Growibes is the right team to take it forward.</p>
+        </div>
+        <div class="steps">
+          <div class="step"><b>01</b><div><h3>We read the problem.</h3><p>Your context determines who should enter the conversation and what needs to be understood first.</p></div></div>
+          <div class="step"><b>02</b><div><h3>We pressure-test the assumption.</h3><p>We look for the architectural, delivery or platform constraint that could change the decision.</p></div></div>
+          <div class="step"><b>03</b><div><h3>We show you the next sensible move.</h3><p>That may be discovery, architecture, implementation, partnership — or a decision not to proceed.</p></div></div>
+          <div class="step"><b>04</b><div><h3>When useful, we prove it.</h3><p>The free 14-day engineering sprint gives a path from conversation to evidence on a real problem.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="himalaya" id="himalayas">
+      <div class="himalaya-aura"></div>
+      <div class="wrap himalaya-grid">
+        <div class="himalaya-story">
+          <div class="kicker">03 / THE HIMALAYAN ADVANTAGE · DHARAMSALA</div>
+          <h2>Where every step<br><em>teaches you to pay attention.</em></h2>
+          <p class="himalaya-copy">In the Himalayas, a trail does not reward autopilot. Terrain shifts. Weather changes. Visibility disappears. Every step asks you to read the ground, understand the risk and move with intention.</p>
+          <p class="himalaya-copy">That is the discipline we bring to engineering: <strong>deep focus, deliberate decisions and precision from Sprint 0.</strong> We slow down where it matters so the business can move faster where it counts.</p>
+          <div class="dalai-card">
+            <div class="dalai-mark">DHARAMSALA · A PLACE OF MINDFUL ATTENTION</div>
+            <div class="dalai-row">
+              <div class="dalai-symbol">◌</div>
+              <div>
+                <h3>The Dalai Lama made Dharamsala synonymous with a deeper kind of attention.</h3>
+                <p>We do not borrow a spiritual claim to sell software. We take inspiration from the culture of mindfulness that surrounds this place: <strong>be present, observe clearly, act deliberately.</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="trail-stage">
+          <div class="trail-meta"><span>THE TRAIL</span><span>THE METHOD</span></div>
+          <svg class="trail-svg" viewBox="0 0 700 720" aria-hidden="true">
+            <defs>
+              <linearGradient id="trailGlow" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#69B7D8"/><stop offset=".55" stop-color="#A9D9E8"/><stop offset="1" stop-color="#D8E98C"/></linearGradient>
+              <filter id="glow"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+            <g opacity=".18" fill="none" stroke="#A9D9E8">
+              <path d="M0 550 L110 430 190 485 290 300 390 395 500 180 700 330"/><path d="M0 640 L150 520 235 560 355 390 455 465 575 280 700 390"/>
+            </g>
+            <path d="M610 675 C535 620 455 622 445 550 C435 480 535 465 490 405 C445 345 315 380 300 310 C285 240 390 225 355 160 C335 120 285 105 240 55" fill="none" stroke="#69B7D8" stroke-opacity=".18" stroke-width="24" filter="url(#glow)"/>
+            <path class="trail-line" d="M610 675 C535 620 455 622 445 550 C435 480 535 465 490 405 C445 345 315 380 300 310 C285 240 390 225 355 160 C335 120 285 105 240 55" fill="none" stroke="url(#trailGlow)" stroke-width="3.5" stroke-linecap="round"/>
+            <g fill="#071019" stroke="#A9D9E8" stroke-width="2">
+              <circle cx="610" cy="675" r="13"/><circle cx="445" cy="550" r="13"/><circle cx="490" cy="405" r="13"/><circle cx="300" cy="310" r="13"/><circle cx="355" cy="160" r="13"/><circle cx="240" cy="55" r="13"/>
+            </g>
+            <g fill="#FFFDF7" font-family="Inter,Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="2">
+              <text x="535" y="708">SPRINT 0</text><text x="468" y="546">OBSERVE</text><text x="510" y="401">TEST</text><text x="252" y="306">DECIDE</text><text x="380" y="157">BUILD</text><text x="260" y="50">SCALE</text>
+            </g>
+            <path d="M175 98 L240 18 L305 98" fill="none" stroke="#FFFDF7" stroke-opacity=".28" stroke-width="2"/>
+            <path d="M240 18 L240 55" stroke="#D8E98C" stroke-width="2"/>
+          </svg>
+          <div class="trail-statement"><b>ONE STEP.</b> ONE DECISION. ONE PROOF.</div>
+          <div class="risk-note">THE TERRAIN CHANGES.<br><strong>OUR ATTENTION DOESN'T.</strong></div>
+        </div>
+      </div>
+      <div class="discipline-rail wrap">
+        <div><b>01</b><strong>Deep focus</strong><span>Attention before activity.</span></div>
+        <div><b>02</b><strong>Precision from Sprint 0</strong><span>Find the difficult part early.</span></div>
+        <div><b>03</b><strong>Mindful engineering</strong><span>Observe. Question. Decide deliberately.</span></div>
+        <div><b>04</b><strong>Earn the next step</strong><span>Proof before scale.</span></div>
+      </div>
+      <div class="himalaya-footer wrap"><span>BUILT IN DHARAMSALA</span><span>DEEP WORK · PRECISION · ENGINEERING</span><span>FOCUSED BY DESIGN</span></div>
+    </section>
+
+    <section class="offices" id="offices">
+      <div class="wrap">
+        <div class="officehead">
+          <div>
+            <div class="kicker">04 / Find Growibes</div>
+            <h2>Built in the Himalayas.<br><em>Connected to the world.</em></h2>
+          </div>
+          <p>Our current public contact record lists our Dharamshala office. We are keeping this section deliberately factual rather than publishing unverified locations or addresses.</p>
+        </div>
+        <div class="officegrid">
+          <article class="office">
+            <small>INDIA / DHARAMSHALA</small>
+            <h3>Dharamshala</h3>
+            <p>Near Cricket Stadium Lane<br>Dharamshala, Himachal Pradesh, India</p>
+            <a href="mailto:nitish@growibes.com">nitish@growibes.com ↗</a>
+            <a href="tel:+919816091609">+91 9816091609 ↗</a>
+            <div class="location-note">For the most current directions or a meeting location, contact us before visiting.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="privacy">
+      <div class="wrap privacygrid">
+        <div>
+          <div class="kicker" style="color:#2869cf">05 / Built for a safe conversation</div>
+          <h2>Your information.<br><em>Handled deliberately.</em></h2>
+          <p>Enterprise conversations deserve the same discipline as enterprise engineering. We designed this contact experience to minimize friction for you while making privacy, security and data handling explicit.</p>
+          <div class="trust-badges">
+            <span><b>01</b> Data minimisation</span>
+            <span><b>02</b> Separate marketing consent</span>
+            <span><b>03</b> Privacy notice at collection</span>
+            <span><b>04</b> Server-side security controls</span>
+          </div>
+        </div>
+        <div class="rows">
+          <div class="prow"><b>Private by design</b><span>We ask for only one piece of business information as a requirement: your email address. Everything else is optional.</span></div>
+          <div class="prow"><b>Why we ask</b><span>Your email lets us respond to the conversation you initiate. Optional context helps us make that first response more useful.</span></div>
+          <div class="prow"><b>No hidden subscription</b><span>Sending an enquiry does not opt you into marketing. Updates are a separate, optional choice.</span></div>
+          <div class="prow"><b>Secure handling</b><span>Submissions use Drupal’s form API: HTTPS, CSRF protection, server-side validation and access-controlled storage.</span></div>
+          <div class="prow"><b>Respect the relationship</b><span>We do not need a long questionnaire to decide whether a conversation is worth having. Start with the problem. We can learn the rest together.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% if page.footer %}
+    <div class="gw-page-footer" role="contentinfo">
+      {{ page.footer }}
+    </div>
+  {% endif %}
+</div>

@@ -6,9 +6,61 @@ dependencies:
     - link
   theme:
     - growibes
-active_version: fa2917129f66ea1b
+active_version: ad526c16aab1617d
 versioned_properties:
   active:
+    settings:
+      prop_field_definitions:
+        logo_href:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+        cta_label:
+          required: false
+          field_type: string
+          field_storage_settings: {  }
+          field_instance_settings: {  }
+          field_widget: string_textfield
+          default_value:
+            -
+              value: 'Talk to a Senior Architect'
+          expression: ℹ︎string␟value
+          derived_schema_metadata:
+            string_shape: {  }
+        cta_href:
+          required: false
+          field_type: link
+          field_storage_settings: {  }
+          field_instance_settings:
+            title: 0
+            link_type: 17
+          field_widget: link_default
+          default_value:
+            -
+              uri: /contact
+              options: {  }
+          expression: ℹ︎link␟url
+          derived_schema_metadata:
+            string_shape:
+              format: uri-reference
+    fallback_metadata:
+      slot_definitions:
+        navigation:
+          title: Navigation
+          description: 'Optional. Leave empty to use the homepage-final links.'
+  fa2917129f66ea1b:
     settings:
       prop_field_definitions:
         logo_href:

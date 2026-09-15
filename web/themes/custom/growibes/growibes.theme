@@ -24,8 +24,20 @@ function growibes_preprocess_html(array &$variables): void {
  * Header and footer always come from homepage-final unless Canvas (or a block)
  * already filled those regions.
  */
+/**
+ * Implements hook_theme_suggestions_page_alter().
+ */
+function growibes_theme_suggestions_page_alter(array &$suggestions, array $variables): void {
+  if (growibes_is_contact_page()) {
+    $suggestions[] = 'page__contact';
+  }
+}
+
 function growibes_preprocess_page(array &$variables): void {
   $variables['growibes_canvas'] = !empty($variables['rendered_by_canvas']);
+  if (growibes_is_contact_page()) {
+    $variables['#attached']['library'][] = 'growibes/contact';
+  }
 
   if (!growibes_region_has_content($variables['page']['header'] ?? [])) {
     $variables['page']['header']['growibes_header'] = [
@@ -105,6 +117,28 @@ function growibes_prepare_menu_items(array &$items): void {
 /**
  * Returns TRUE when a page region contains a visible child.
  */
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function growibes_form_webform_submission_growibes_contact_add_form_alter(array &$form, $form_state, $form_id): void {
+  $form['#attributes']['class'][] = 'gw-contact-form';
+  $form['actions']['submit']['#attributes']['class'][] = 'submit';
+}
+
+/**
+ * Returns TRUE on the Growibes contact Webform page.
+ */
+function growibes_is_contact_page(): bool {
+  $route = \Drupal::routeMatch();
+  if ($route->getRouteName() === 'entity.webform.canonical') {
+    $webform = $route->getParameter('webform');
+    return $webform && $webform->id() === 'growibes_contact';
+  }
+  $path = \Drupal::service('path.current')->getPath();
+  $alias = \Drupal::service('path_alias.manager')->getAliasByPath($path);
+  return $alias === '/contact' || $path === '/contact';
+}
+
 function growibes_region_has_content(array $region): bool {
   foreach (Element::getVisibleChildren($region) as $key) {
     if (is_array($region[$key]) && $region[$key] !== []) {

@@ -1,0 +1,12 @@
+[
+  {
+    "source": "06_Strategy_and_Architecture/growibes-enterprise-architecture-award-v3.html",
+    "slug": "enterprise-architecture",
+    "alias": "/strategy/enterprise-architecture",
+    "title": "Enterprise Architecture",
+    "group": "strategy",
+    "description": "Enterprise architecture that turns complexity into a scalable growth system.",
+    "html_file": "enterprise-architecture.html",
+    "css_file": "enterprise-architecture.css"
+  }
+]

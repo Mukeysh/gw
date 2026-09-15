@@ -91,7 +91,7 @@ def main() -> int:
     links = {Path(page["source"]).name: page["alias"] for page in PAGES}
     links.update(EXTRA_LINKS)
 
-    selected = [p for p in PAGES if group == "all" or p["group"] == group]
+    selected = [p for p in PAGES if group == "all" or p["group"] == group or p["slug"] == group]
     manifest = []
     for page in selected:
         source = ROOT / page["source"]

@@ -97,7 +97,7 @@ $strategy = $add('Strategy', $nolink);
 $add('Overview', 'internal:/strategy', $strategy);
 foreach ([
   'Digital Strategy' => '/',
-  'Enterprise Architecture' => '/',
+  'Enterprise Architecture' => '/strategy/enterprise-architecture',
   'Platform Roadmaps' => '/',
   'Technical Discovery' => '/strategy/technical-discovery',
 ] as $title => $path) {
@@ -122,7 +122,7 @@ $why = $add('Why Growibes', $nolink);
 $add('Himalayan Story', 'internal:/why-growibes/himalayan-story', $why);
 
 $start = $add('Start', $nolink);
-$add('Contact', 'internal:/#contact', $start);
+$add('Contact', 'internal:/contact', $start);
 $add('Free 14-day sprint', 'internal:/strategy/technical-discovery', $start);
 
 echo "Main menu rebuilt.\n";

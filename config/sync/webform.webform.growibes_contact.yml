@@ -1,0 +1,311 @@
+uuid: adf0bbe5-099a-4f51-86f0-21554dd6724e
+langcode: en
+status: open
+dependencies: {  }
+weight: 0
+open: null
+close: null
+uid: 1
+template: false
+archive: false
+id: growibes_contact
+title: 'Contact Growibes'
+description: 'Growibes enterprise contact / start a conversation.'
+categories: {  }
+elements: |-
+  name:
+    '#type': textfield
+    '#title': Your name
+    '#attributes':
+      autocomplete: name
+    '#wrapper_attributes':
+      class:
+        - gw-field
+  company:
+    '#type': textfield
+    '#title': Company
+    '#attributes':
+      autocomplete: organization
+    '#wrapper_attributes':
+      class:
+        - gw-field
+  email:
+    '#type': email
+    '#title': Work email
+    '#required': true
+    '#attributes':
+      autocomplete: email
+    '#wrapper_attributes':
+      class:
+        - gw-field
+  role:
+    '#type': textfield
+    '#title': Your role
+    '#attributes':
+      autocomplete: organization-title
+    '#wrapper_attributes':
+      class:
+        - gw-field
+  need:
+    '#type': radios
+    '#title': What brings you here?
+    '#options':
+      'Platform modernization': Platform modernization
+      'Enterprise Drupal': Enterprise Drupal
+      'AI engineering': AI engineering
+      'Architecture / roadmap': Architecture / roadmap
+      'Connected systems': Connected systems
+      'Agency partnership': Agency partnership
+      'Free 14-day sprint': Free 14-day sprint
+    '#wrapper_attributes':
+      class:
+        - gw-field
+        - gw-field--full
+        - gw-choices
+  message:
+    '#type': textarea
+    '#title': What is changing, stuck or at risk?
+    '#placeholder': 'A few sentences are enough. What are you trying to achieve, what is getting in the way, and what cannot break?'
+    '#description': 'Please do not include passwords, API keys, payment details, health information or other sensitive credentials.'
+    '#wrapper_attributes':
+      class:
+        - gw-field
+        - gw-field--full
+  timeline:
+    '#type': select
+    '#title': When does this matter?
+    '#empty_option': 'Not sure yet'
+    '#options':
+      Immediately: Immediately
+      'Within 30 days': Within 30 days
+      '1–3 months': 1–3 months
+      '3–6 months': 3–6 months
+      '6+ months': 6+ months
+    '#wrapper_attributes':
+      class:
+        - gw-field
+  source:
+    '#type': select
+    '#title': How did you find us?
+    '#empty_option': 'Select one'
+    '#options':
+      Search: Search
+      Referral: Referral
+      LinkedIn: LinkedIn
+      'Drupal community': Drupal community
+      'Existing relationship': Existing relationship
+      Other: Other
+    '#wrapper_attributes':
+      class:
+        - gw-field
+  privacy_note:
+    '#type': webform_markup
+    '#markup': '<p class="form-note">By submitting, your email may be used to respond to this enquiry as described in our <a href="/privacy" rel="noopener">Privacy Notice</a>. No marketing consent is implied.</p>'
+    '#wrapper_attributes':
+      class:
+        - gw-field
+        - gw-field--full
+  marketing:
+    '#type': checkbox
+    '#title': 'Yes, I would like occasional Growibes insights, updates and relevant offers. <b>This is optional.</b>'
+    '#title_display': after
+    '#wrapper_attributes':
+      class:
+        - gw-field
+        - gw-field--full
+        - gw-consent
+  actions:
+    '#type': webform_actions
+    '#title': Submit
+    '#submit__label': 'Send to Growibes →'
+css: ''
+javascript: ''
+settings:
+  ajax: false
+  ajax_scroll_top: form
+  ajax_progress_type: ''
+  ajax_effect: ''
+  ajax_speed: null
+  page: true
+  page_submit_path: /contact
+  page_confirm_path: ''
+  page_theme_name: ''
+  form_title: none
+  form_submit_once: true
+  form_open_message: ''
+  form_close_message: ''
+  form_exception_message: ''
+  form_previous_submissions: true
+  form_confidential: false
+  form_confidential_message: ''
+  form_disable_remote_addr: false
+  form_convert_anonymous: false
+  form_prepopulate: false
+  form_prepopulate_source_entity: false
+  form_prepopulate_source_entity_required: false
+  form_prepopulate_source_entity_type: ''
+  form_unsaved: false
+  form_disable_back: false
+  form_submit_back: false
+  form_disable_autocomplete: false
+  form_novalidate: false
+  form_disable_inline_errors: false
+  form_required: false
+  form_autofocus: false
+  form_details_toggle: false
+  form_reset: false
+  form_access_denied: default
+  form_access_denied_title: ''
+  form_access_denied_message: ''
+  form_access_denied_attributes: {  }
+  form_file_limit: ''
+  form_file_limit_message: ''
+  form_attributes:
+    class:
+      - gw-contact-form
+  form_method: ''
+  form_action: ''
+  share: false
+  share_node: false
+  share_theme_name: ''
+  share_title: true
+  share_page_body_attributes: {  }
+  submission_label: ''
+  submission_exception_message: ''
+  submission_locked_message: ''
+  submission_log: false
+  submission_excluded_elements: {  }
+  submission_exclude_empty: false
+  submission_exclude_empty_checkbox: false
+  submission_views: {  }
+  submission_views_replace: {  }
+  submission_user_columns: {  }
+  submission_user_duplicate: false
+  submission_access_denied: default
+  submission_access_denied_title: ''
+  submission_access_denied_message: ''
+  submission_access_denied_attributes: {  }
+  previous_submission_message: ''
+  previous_submissions_message: ''
+  autofill: false
+  autofill_message: ''
+  autofill_excluded_elements: {  }
+  wizard_progress_bar: true
+  wizard_progress_pages: false
+  wizard_progress_percentage: false
+  wizard_progress_link: false
+  wizard_progress_states: false
+  wizard_start_label: ''
+  wizard_preview_link: false
+  wizard_confirmation: true
+  wizard_confirmation_label: ''
+  wizard_auto_forward: true
+  wizard_auto_forward_hide_next_button: false
+  wizard_keyboard: true
+  wizard_track: ''
+  wizard_prev_button_label: ''
+  wizard_next_button_label: ''
+  wizard_toggle: false
+  wizard_toggle_show_label: ''
+  wizard_toggle_hide_label: ''
+  wizard_page_type: container
+  wizard_page_title_tag: h2
+  preview: 0
+  preview_label: ''
+  preview_title: ''
+  preview_message: ''
+  preview_attributes: {  }
+  preview_excluded_elements: {  }
+  preview_exclude_empty: true
+  preview_exclude_empty_checkbox: false
+  draft: none
+  draft_multiple: false
+  draft_auto_save: false
+  draft_saved_message: ''
+  draft_loaded_message: ''
+  draft_pending_single_message: ''
+  draft_pending_multiple_message: ''
+  confirmation_type: inline
+  confirmation_url: ''
+  confirmation_title: ''
+  confirmation_message: '<p class="gw-contact-thanks"><strong>Thank you.</strong> We have your enquiry and will route it to the right senior people. This is not a marketing subscription.</p>'
+  confirmation_attributes: {  }
+  confirmation_back: true
+  confirmation_back_label: ''
+  confirmation_back_attributes: {  }
+  confirmation_exclude_query: false
+  confirmation_exclude_token: false
+  confirmation_update: false
+  limit_total: null
+  limit_total_interval: null
+  limit_total_message: ''
+  limit_total_unique: false
+  limit_user: null
+  limit_user_interval: null
+  limit_user_message: ''
+  limit_user_unique: false
+  entity_limit_total: null
+  entity_limit_total_interval: null
+  entity_limit_user: null
+  entity_limit_user_interval: null
+  purge: none
+  purge_days: null
+  results_disabled: false
+  results_disabled_ignore: false
+  results_customize: false
+  token_view: false
+  token_update: false
+  token_delete: false
+  serial_disabled: false
+access:
+  create:
+    roles:
+      - anonymous
+      - authenticated
+    users: {  }
+    permissions: {  }
+  view_any:
+    roles:
+      - administrator
+    users: {  }
+    permissions: {  }
+handlers:
+  email_nitish:
+    id: email
+    handler_id: email_nitish
+    label: 'Email Growibes'
+    notes: ''
+    status: true
+    conditions: {  }
+    weight: 0
+    settings:
+      states:
+        - completed
+      to_mail: nitish@growibes.com
+      to_options: {  }
+      bcc_mail: ''
+      bcc_options: {  }
+      cc_mail: hello@growibes.com
+      cc_options: {  }
+      from_mail: _default
+      from_options: {  }
+      from_name: 'Growibes website'
+      reply_to: '[webform_submission:values:email:raw]'
+      return_path: ''
+      sender_mail: ''
+      sender_name: ''
+      subject: 'Growibes contact: [webform_submission:values:need:raw] ([webform_submission:values:email:raw])'
+      body: _default
+      excluded_elements: {  }
+      ignore_access: false
+      exclude_empty: true
+      exclude_empty_checkbox: false
+      exclude_attachments: false
+      html: true
+      attachments: false
+      twig: false
+      theme_name: ''
+      langcode: ''
+      parameters: {  }
+      debug: false
+variants: {  }

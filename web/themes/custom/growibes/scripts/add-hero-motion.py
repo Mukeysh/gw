@@ -38,7 +38,7 @@ SHARED = """
 @keyframes gw-token-fill{0%,100%{transform:scaleX(.55)}50%{transform:scaleX(1)}}
 @keyframes gw-border-glow{0%,100%{border-color:rgba(255,255,255,.13)}45%{border-color:rgba(202,255,77,.55)}}
 @media (prefers-reduced-motion:reduce){
-  .earth:before,.earth:after,.point,.lab1,.lab2,.lab3,.route,.box,.dcore,.globe:before,.globe:after,.orbit,.lang,.wfline,.wfnode,.arrow,.arrow2,.brain .o1,.brain .o2,.sat,.beam,.brain .core,.sphere,.sphere:after,.signal,.o1,.o2,.o3,.network path,.network .node,.orb:before,.orb:after,.core-ring,.core-ring:before,.core-ring:after,.orbit2,.core-word,.constellation line,.constellation circle,.pulse,.radar:after,.center,.network .line,.node,.ring,.world:after,.diagram:before,.diagram .core,.diagram .node,.funnel .f,.canvas .token,.canvas .component,.canvas .f-side,.mesh .link,.mesh .hub,.mesh .node,.ticks i,.clock .status,.clock .metric,.map .route,.map .node,.maplabel{animation:none!important}
+  .earth:before,.earth:after,.point,.lab1,.lab2,.lab3,.route,.box,.dcore,.globe:before,.globe:after,.orbit,.lang,.wfline,.wfnode,.arrow,.arrow2,.brain .o1,.brain .o2,.sat,.beam,.brain .core,.sphere,.sphere:after,.signal,.o1,.o2,.o3,.network path,.network .node,.orb:before,.orb:after,.core-ring,.core-ring:before,.core-ring:after,.orbit2,.core-word,.constellation line,.constellation circle,.pulse,.radar:after,.center,.network .line,.node,.ring,.world:after,.diagram:before,.diagram .core,.diagram .node,.funnel .f,.canvas .token,.canvas .component,.canvas .f-side,.mesh .link,.mesh .hub,.mesh .node,.ticks i,.clock .status,.clock .metric,.map .route,.map .node,.maplabel,.diagram .path,.orbit.dash,.dnode,.connector{animation:none!important}
 }
 """
 
@@ -229,6 +229,22 @@ CSS = {
 .ticks i:nth-child(10){animation-delay:.9s}
 .clock .status{animation:gw-breathe 2.4s ease-in-out infinite}
 .clock .metric{animation:gw-glow 4s ease-in-out infinite}
+""",
+    "enterprise-architecture.css": """
+.reveal{opacity:1;transform:none}
+.core{display:flex;flex-direction:column;align-items:center;justify-content:center;white-space:nowrap;width:168px;height:168px}
+.core .word{display:block}
+.diagram .path{animation:gw-stroke 2.4s linear infinite}
+.orbit.dash{stroke-dasharray:4 8;animation:gw-stroke 18s linear infinite}
+.core{animation:gw-glow 3.6s ease-in-out infinite}
+.dnode.n1,.dnode.n2,.dnode.n3,.dnode.n4{animation:gw-float 5.2s ease-in-out infinite}
+.dnode.n2{animation-delay:.5s}
+.dnode.n3{animation-delay:1s}
+.dnode.n4{animation-delay:1.5s}
+.dnode.n5,.dnode.n6{animation:gw-border-glow 3.8s ease-in-out infinite}
+.dnode.n6{animation-delay:1.2s}
+.connector{background-size:220% 100%;animation:gw-sheen 2.2s linear infinite}
+.c2,.c4{animation-direction:reverse}
 """,
     "strategy.css": layout(".in", ".map", "520px") + """
 .map .route{background-size:220% 100%;animation:gw-sheen 2.6s linear infinite}

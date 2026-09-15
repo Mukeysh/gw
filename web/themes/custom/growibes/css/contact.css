@@ -1,0 +1,955 @@
+/**
+ * Growibes contact page — production contact-wow-v7 art direction
+ * applied around a real Drupal Webform.
+ */
+
+.gw-contact {
+  --ink: #07090d;
+  --ink2: #0d1118;
+  --paper: #f4f5f7;
+  --white: #fff;
+  --muted: #89919d;
+  --blue: #2f7cff;
+  --soft: #8ab5ff;
+  --lime: #d7ff4f;
+  --cyan: #66d9ff;
+  --line: rgba(255, 255, 255, .12);
+  --darkline: rgba(7, 9, 13, .14);
+  --max: 1320px;
+  background: var(--ink);
+  color: var(--white);
+}
+
+.gw-contact .wrap {
+  width: min(var(--max), calc(100% - 48px));
+  margin: auto;
+}
+
+.gw-contact .kicker {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .19em;
+  font-weight: 850;
+  color: var(--soft);
+}
+
+.gw-contact .hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 720px;
+  padding: 108px 0 96px;
+  background:
+    radial-gradient(circle at 77% 37%, rgba(47, 124, 255, .25), transparent 25%),
+    radial-gradient(circle at 72% 75%, rgba(102, 217, 255, .08), transparent 22%),
+    linear-gradient(180deg, #07090d, #090d14);
+}
+
+.gw-contact .hero:before,
+.gw-contact .hero:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.gw-contact .hero:before {
+  width: 760px;
+  height: 760px;
+  border: 1px solid rgba(138, 181, 255, .13);
+  right: -300px;
+  top: -270px;
+}
+
+.gw-contact .hero:after {
+  width: 510px;
+  height: 510px;
+  border: 1px solid rgba(215, 255, 79, .08);
+  right: 30px;
+  top: -20px;
+}
+
+.gw-contact .hero h1 {
+  position: relative;
+  z-index: 2;
+  font-size: clamp(64px, 9vw, 132px);
+  line-height: .86 !important;
+  letter-spacing: -.075em;
+  margin: 22px 0 28px;
+  max-width: min(960px, 58vw);
+}
+
+.gw-contact .hero h1 em {
+  font-style: normal;
+  color: var(--blue);
+}
+
+.gw-contact .dek {
+  position: relative;
+  z-index: 2;
+  max-width: 720px;
+  font-size: 20px;
+  line-height: 1.48;
+  color: #b9c1cc;
+  margin: 0;
+}
+
+.gw-contact .hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.gw-contact .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 19px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.gw-contact .btn.primary {
+  background: var(--lime);
+  color: var(--ink);
+}
+
+.gw-contact .btn.ghost {
+  border: 1px solid rgba(255, 255, 255, .2);
+  color: #fff;
+  background: rgba(255, 255, 255, .04);
+}
+
+.gw-contact .constellation {
+  position: absolute;
+  right: 6%;
+  top: 150px;
+  width: 470px;
+  height: 470px;
+  z-index: 1;
+}
+
+.gw-contact .orbit {
+  position: absolute;
+  border: 1px solid rgba(138, 181, 255, .18);
+  border-radius: 50%;
+  inset: 40px;
+  animation: gw-contact-spin 42s linear infinite;
+}
+
+.gw-contact .orbit.two {
+  inset: 105px;
+  border-color: rgba(102, 217, 255, .16);
+  animation-duration: 28s;
+  animation-direction: reverse;
+}
+
+.gw-contact .core {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 142px;
+  height: 142px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: rgba(255, 255, 255, .07);
+  border: 1px solid rgba(255, 255, 255, .22);
+  box-shadow: 0 0 70px rgba(47, 124, 255, .18);
+  backdrop-filter: blur(20px);
+  animation: gw-contact-glow 3.6s ease-in-out infinite;
+}
+
+.gw-contact .core b {
+  font-size: 12px;
+  letter-spacing: .08em;
+}
+
+.gw-contact .node {
+  position: absolute;
+  padding: 10px 13px;
+  border: 1px solid rgba(255, 255, 255, .16);
+  background: rgba(13, 17, 24, .78);
+  border-radius: 12px;
+  backdrop-filter: blur(16px);
+  font-size: 9px;
+  letter-spacing: .13em;
+  font-weight: 850;
+  color: #dce2ea;
+  animation: gw-contact-float 5.2s ease-in-out infinite;
+}
+
+.gw-contact .n1 { left: 20px; top: 55px; }
+.gw-contact .n2 { right: 0; top: 115px; animation-delay: .5s; }
+.gw-contact .n3 { left: 10px; bottom: 70px; animation-delay: 1s; }
+.gw-contact .n4 { right: 20px; bottom: 45px; animation-delay: 1.5s; }
+.gw-contact .n5 {
+  left: 50%;
+  top: 2px;
+  transform: translateX(-50%);
+  color: var(--lime);
+  border-color: rgba(215, 255, 79, .25);
+  animation: gw-contact-glow 3.2s ease-in-out infinite;
+}
+
+.gw-contact .signal {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #090c11;
+}
+
+.gw-contact .signalgrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.gw-contact .sig {
+  padding: 23px 22px;
+  border-right: 1px solid var(--line);
+}
+
+.gw-contact .sig:last-child { border-right: 0; }
+.gw-contact .sig b { display: block; font-size: 13px; margin-bottom: 6px; }
+.gw-contact .sig span { font-size: 11px; color: #7f8895; line-height: 1.45; }
+
+.gw-contact .contact-panel {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 100px 0 115px;
+}
+
+.gw-contact .contactgrid {
+  display: grid;
+  grid-template-columns: .72fr 1.28fr;
+  gap: 72px;
+}
+
+.gw-contact .side {
+  position: sticky;
+  top: 105px;
+  height: max-content;
+}
+
+.gw-contact .side h2 {
+  font-size: clamp(44px, 5vw, 70px);
+  line-height: .9 !important;
+  letter-spacing: -.07em;
+  margin: 16px 0 22px;
+}
+
+.gw-contact .side p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #5f6874;
+}
+
+.gw-contact .psych {
+  margin-top: 32px;
+  padding: 22px;
+  border-radius: 20px;
+  background: #0b1017;
+  color: #fff;
+}
+
+.gw-contact .psych strong { display: block; font-size: 15px; margin-bottom: 8px; }
+.gw-contact .psych span { display: block; font-size: 11px; line-height: 1.55; color: #a3acb8; }
+
+.gw-contact .proofmini {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.gw-contact .proofmini div {
+  padding: 15px;
+  border: 1px solid var(--darkline);
+  border-radius: 14px;
+}
+
+.gw-contact .proofmini b { font-size: 18px; }
+.gw-contact .proofmini span {
+  display: block;
+  font-size: 9px;
+  color: #6f7782;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin-top: 4px;
+}
+
+.gw-contact .gw-contact-form-wrap {
+  background: #fff;
+  border: 1px solid #dfe2e7;
+  border-radius: 28px;
+  padding: 36px;
+  box-shadow: 0 28px 90px rgba(7, 9, 13, .12);
+}
+
+.gw-contact .formhead {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: start;
+  margin-bottom: 28px;
+}
+
+.gw-contact .formhead h2 {
+  font-size: 34px;
+  line-height: .94;
+  letter-spacing: -.06em;
+  margin: 0;
+}
+
+.gw-contact .required {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: #747c87;
+}
+
+.gw-contact .page-title,
+.gw-contact .block-page-title-block,
+.gw-contact h1.page-title {
+  display: none;
+}
+
+.gw-contact-form,
+.gw-contact-form > .webform-required {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.gw-contact .gw-field--full,
+.gw-contact .form-actions,
+.gw-contact .webform-confirmation,
+.gw-contact .gw-status {
+  grid-column: 1 / -1;
+}
+
+.gw-contact .form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0;
+}
+
+.gw-contact label,
+.gw-contact .form-item label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #151a21;
+}
+
+.gw-contact .form-item:not(:has(.form-required)):not(.form-item--error) > label:not(.option)::after,
+.gw-contact .form-item > label:not(.form-required):not(.option)::after {
+  content: " optional";
+  font-weight: 500;
+  color: #7a828d;
+  text-transform: lowercase;
+}
+
+.gw-contact .form-item--error > label:not(.option)::after,
+.gw-contact label.form-required::after,
+.gw-contact .form-required > label::after,
+.gw-contact .js-form-required::after {
+  content: none;
+}
+
+.gw-contact label.form-required::after,
+.gw-contact .form-required::after {
+  content: " *";
+  color: #1556b8;
+  font-weight: 800;
+}
+
+.gw-contact .gw-consent label::after,
+.gw-contact .gw-choices label::after {
+  content: none !important;
+}
+
+.gw-contact input[type="text"],
+.gw-contact input[type="email"],
+.gw-contact select,
+.gw-contact textarea {
+  width: 100%;
+  border: 1px solid #d2d6dc;
+  background: #fff;
+  border-radius: 13px;
+  padding: 14px 15px;
+  font: inherit;
+  font-size: 14px;
+  color: #10151b;
+  outline: none;
+  transition: .18s;
+}
+
+.gw-contact textarea {
+  min-height: 145px;
+  resize: vertical;
+}
+
+.gw-contact input:focus,
+.gw-contact select:focus,
+.gw-contact textarea:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(47, 124, 255, .12);
+}
+
+.gw-contact .description,
+.gw-contact .form-item .description {
+  font-size: 10px;
+  color: #737b86;
+  line-height: 1.5;
+}
+
+.gw-contact .form-note {
+  font-size: 10px;
+  color: #747c87;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.gw-contact .form-note a { color: #155fc9; }
+
+.gw-contact fieldset.gw-choices,
+.gw-contact .gw-choices {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-inline-size: 0;
+}
+
+.gw-contact .gw-choices > legend,
+.gw-contact .gw-choices .fieldset-legend {
+  font-size: 12px;
+  font-weight: 800;
+  color: #151a21;
+  padding: 0;
+  margin: 0 0 8px;
+}
+
+.gw-contact .gw-choices .form-radios,
+.gw-contact .gw-choices .js-webform-radios,
+.gw-contact .webform-options-display-one-column {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.gw-contact .gw-choices .form-item {
+  margin: 0;
+  position: relative;
+}
+
+.gw-contact .gw-choices input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.gw-contact .gw-choices label.option,
+.gw-contact .gw-choices .form-item label {
+  border: 1px solid #d5d9df;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+  display: block;
+}
+
+.gw-contact .gw-choices .form-item:has(input:checked) label,
+.gw-contact .gw-choices label:has(+ input:checked),
+.gw-contact .gw-choices input:checked + label {
+  border-color: var(--blue);
+  background: #eef4ff;
+  color: #1556b8;
+}
+
+.gw-contact .gw-consent .form-item {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.gw-contact .gw-consent input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  margin-top: 2px;
+}
+
+.gw-contact .gw-consent label {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.55;
+  color: #606974;
+}
+
+.gw-contact .form-actions {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  margin-top: 8px;
+}
+
+.gw-contact .form-actions::before {
+  content: "Your enquiry is not a marketing subscription. Optional marketing consent is separate and can be withdrawn.";
+  font-size: 10px;
+  color: #7b838e;
+  line-height: 1.45;
+  max-width: 400px;
+  margin-right: auto;
+}
+
+.gw-contact .form-submit,
+.gw-contact .webform-button--submit {
+  border: 0;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 999px;
+  padding: 15px 22px;
+  font-weight: 850;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.gw-contact .form-submit:hover,
+.gw-contact .webform-button--submit:hover {
+  background: #18202b;
+}
+
+.gw-contact .gw-contact-thanks {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #176b3a;
+}
+
+.gw-contact .after {
+  background: #090d14;
+  color: #fff;
+  padding: 100px 0;
+}
+
+.gw-contact .aftergrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+}
+
+.gw-contact .after h2 {
+  font-size: clamp(50px, 6vw, 82px);
+  line-height: .87;
+  letter-spacing: -.07em;
+  margin: 16px 0;
+}
+
+.gw-contact .after h2 em {
+  font-style: normal;
+  color: var(--blue);
+}
+
+.gw-contact .after p {
+  max-width: 520px;
+  color: #858e9b;
+  line-height: 1.65;
+  font-size: 13px;
+}
+
+.gw-contact .steps { border-top: 1px solid var(--line); }
+.gw-contact .step {
+  display: grid;
+  grid-template-columns: 55px 1fr;
+  gap: 18px;
+  padding: 22px 0;
+  border-bottom: 1px solid var(--line);
+}
+.gw-contact .step b { color: var(--lime); font-size: 11px; }
+.gw-contact .step h3 { margin: 0 0 6px; font-size: 15px; }
+.gw-contact .step p { margin: 0; color: #858e9b; font-size: 12px; line-height: 1.55; }
+
+.gw-contact .himalaya {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(700px 500px at 78% 42%, rgba(105, 183, 216, .14), transparent 68%),
+    linear-gradient(155deg, #061117 0%, #0b2027 52%, #07131a 100%);
+  color: #fff;
+  padding: 125px 0 80px;
+  border-top: 1px solid rgba(169, 217, 232, .13);
+}
+
+.gw-contact .himalaya:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(169, 217, 232, .025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(169, 217, 232, .025) 1px, transparent 1px);
+  background-size: 72px 72px;
+  opacity: .7;
+  pointer-events: none;
+}
+
+.gw-contact .himalaya-aura {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  right: -180px;
+  top: 80px;
+  background: radial-gradient(circle, rgba(105, 183, 216, .10), transparent 65%);
+  filter: blur(4px);
+}
+
+.gw-contact .himalaya-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr .9fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.gw-contact .himalaya-story { max-width: 700px; }
+.gw-contact .himalaya-story .kicker { color: #A9D9E8; letter-spacing: .18em; }
+.gw-contact .himalaya-story h2 {
+  font-size: clamp(52px, 6.2vw, 94px);
+  line-height: .9;
+  letter-spacing: -.055em;
+  margin: 18px 0 28px;
+}
+.gw-contact .himalaya-story h2 em { color: #A9D9E8; font-style: normal; }
+.gw-contact .himalaya-copy {
+  font-size: 17px;
+  line-height: 1.7;
+  color: rgba(255, 253, 247, .70);
+  max-width: 640px;
+  margin: 0 0 16px;
+}
+.gw-contact .himalaya-copy strong { color: #FFFDF7; }
+
+.gw-contact .dalai-card {
+  margin-top: 38px;
+  width: min(100%, 650px);
+  padding: 27px 29px;
+  border: 1px solid rgba(169, 217, 232, .20);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, .075), rgba(255, 255, 255, .025));
+  box-shadow: 0 30px 90px rgba(0, 0, 0, .24);
+}
+
+.gw-contact .dalai-mark {
+  font-size: 9px;
+  letter-spacing: .19em;
+  color: #D8E98C;
+  font-weight: 800;
+}
+
+.gw-contact .dalai-row {
+  display: grid;
+  grid-template-columns: 42px 1fr;
+  gap: 18px;
+  margin-top: 17px;
+}
+
+.gw-contact .dalai-symbol {
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgba(169, 217, 232, .35);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #A9D9E8;
+  font-size: 25px;
+}
+
+.gw-contact .dalai-card h3 {
+  font-size: 19px;
+  line-height: 1.25;
+  color: #FFFDF7;
+  margin: 0 0 9px;
+  letter-spacing: -.02em;
+}
+
+.gw-contact .dalai-card p {
+  font-size: 12px;
+  line-height: 1.65;
+  color: rgba(255, 253, 247, .55);
+  margin: 0;
+}
+
+.gw-contact .dalai-card strong { color: #A9D9E8; }
+
+.gw-contact .trail-stage { position: relative; height: 720px; min-width: 0; }
+.gw-contact .trail-meta {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  display: flex;
+  gap: 45px;
+  color: rgba(169, 217, 232, .45);
+  font-size: 9px;
+  letter-spacing: .18em;
+}
+.gw-contact .trail-svg { width: 100%; height: 100%; overflow: visible; }
+.gw-contact .trail-line {
+  stroke-dasharray: 8 12;
+  animation: gw-contact-dash 2.8s linear infinite;
+}
+.gw-contact .trail-statement {
+  position: absolute;
+  bottom: 52px;
+  right: 18px;
+  font-size: 10px;
+  letter-spacing: .18em;
+  color: rgba(255, 253, 247, .5);
+}
+.gw-contact .trail-statement b { color: #D8E98C; }
+.gw-contact .risk-note {
+  position: absolute;
+  left: 30px;
+  bottom: 135px;
+  font-size: 9px;
+  line-height: 1.5;
+  letter-spacing: .18em;
+  color: rgba(169, 217, 232, .45);
+}
+.gw-contact .risk-note strong { color: #A9D9E8; font-size: 12px; }
+
+.gw-contact .discipline-rail {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  margin-top: 45px;
+  border-top: 1px solid rgba(169, 217, 232, .14);
+  border-bottom: 1px solid rgba(169, 217, 232, .14);
+  background: rgba(169, 217, 232, .08);
+}
+
+.gw-contact .discipline-rail > div {
+  padding: 25px 22px;
+  background: rgba(6, 17, 23, .84);
+}
+
+.gw-contact .discipline-rail b {
+  display: block;
+  color: #69B7D8;
+  font-size: 10px;
+  letter-spacing: .16em;
+  margin-bottom: 19px;
+}
+
+.gw-contact .discipline-rail strong { display: block; color: #FFFDF7; font-size: 16px; }
+.gw-contact .discipline-rail span {
+  display: block;
+  color: rgba(255, 253, 247, .48);
+  font-size: 12px;
+  line-height: 1.45;
+  margin-top: 7px;
+}
+
+.gw-contact .himalaya-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 25px;
+  color: rgba(169, 217, 232, .42);
+  font-size: 9px;
+  letter-spacing: .18em;
+}
+
+.gw-contact .offices {
+  background: #0b1017;
+  color: #fff;
+  padding: 95px 0;
+  border-top: 1px solid var(--line);
+}
+
+.gw-contact .officehead {
+  display: grid;
+  grid-template-columns: 1fr .7fr;
+  gap: 60px;
+  align-items: end;
+  margin-bottom: 40px;
+}
+
+.gw-contact .officehead h2 {
+  font-size: clamp(48px, 6vw, 82px);
+  line-height: .87;
+  letter-spacing: -.07em;
+  margin: 15px 0 0;
+}
+
+.gw-contact .officehead h2 em { font-style: normal; color: var(--blue); }
+.gw-contact .officehead p { font-size: 12px; line-height: 1.65; color: #818a97; }
+
+.gw-contact .officegrid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+.gw-contact .office {
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, .04);
+}
+
+.gw-contact .office small {
+  font-size: 9px;
+  letter-spacing: .16em;
+  color: var(--soft);
+  font-weight: 850;
+}
+
+.gw-contact .office h3 {
+  font-size: 38px;
+  letter-spacing: -.06em;
+  margin: 55px 0 12px;
+}
+
+.gw-contact .office p { font-size: 13px; line-height: 1.6; color: #9aa3af; }
+.gw-contact .office a {
+  display: inline-block;
+  margin: 17px 16px 0 0;
+  font-size: 12px;
+  color: #fff;
+}
+.gw-contact .office a:hover { color: var(--soft); }
+.gw-contact .location-note { margin-top: 15px; font-size: 10px; color: #6f7885; line-height: 1.5; }
+
+.gw-contact .privacy {
+  background: var(--paper);
+  color: var(--ink);
+  padding: 85px 0;
+}
+
+.gw-contact .privacygrid {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 70px;
+}
+
+.gw-contact .privacy h2 {
+  font-size: clamp(46px, 5vw, 68px);
+  line-height: .88;
+  letter-spacing: -.07em;
+  margin: 14px 0;
+}
+
+.gw-contact .privacy h2 em { font-style: normal; color: var(--blue); }
+.gw-contact .privacy p { font-size: 13px; line-height: 1.65; color: #59616c; }
+
+.gw-contact .trust-badges {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 22px;
+}
+
+.gw-contact .trust-badges span {
+  padding: 12px 14px;
+  border: 1px solid var(--darkline);
+  border-radius: 12px;
+  font-size: 12px;
+  background: #fff;
+}
+
+.gw-contact .trust-badges b {
+  display: block;
+  font-size: 10px;
+  letter-spacing: .12em;
+  color: #2869cf;
+  margin-bottom: 4px;
+}
+
+.gw-contact .rows { border-top: 1px solid var(--darkline); }
+.gw-contact .prow {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 25px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--darkline);
+}
+.gw-contact .prow b { font-size: 12px; }
+.gw-contact .prow span { font-size: 11px; color: #69717c; line-height: 1.5; }
+
+@keyframes gw-contact-spin { to { transform: rotate(360deg); } }
+@keyframes gw-contact-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+@keyframes gw-contact-glow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.18); }
+}
+@keyframes gw-contact-dash { to { stroke-dashoffset: -80; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .gw-contact .orbit,
+  .gw-contact .core,
+  .gw-contact .node,
+  .gw-contact .trail-line {
+    animation: none !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .gw-contact .constellation { opacity: .32; right: -100px; }
+  .gw-contact .contactgrid,
+  .gw-contact .privacygrid,
+  .gw-contact .aftergrid,
+  .gw-contact .officehead,
+  .gw-contact .himalaya-grid {
+    grid-template-columns: 1fr;
+  }
+  .gw-contact .side { position: static; }
+  .gw-contact .signalgrid { grid-template-columns: 1fr 1fr; }
+  .gw-contact .officegrid { grid-template-columns: 1fr; }
+  .gw-contact .trail-stage { height: 560px; margin-top: 25px; }
+  .gw-contact .discipline-rail { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 650px) {
+  .gw-contact .wrap { width: calc(100% - 32px); }
+  .gw-contact .hero { min-height: auto; padding: 78px 0 68px; }
+  .gw-contact .constellation { display: none; }
+  .gw-contact .hero h1 { font-size: 64px; }
+  .gw-contact .dek { font-size: 17px; }
+  .gw-contact .signalgrid { grid-template-columns: 1fr; }
+  .gw-contact .sig { border-right: 0; border-bottom: 1px solid var(--line); }
+  .gw-contact .contact-panel { padding: 70px 0 80px; }
+  .gw-contact-form,
+  .gw-contact-form > .webform-required { grid-template-columns: 1fr; }
+  .gw-contact .gw-choices .form-radios,
+  .gw-contact .gw-choices .js-webform-radios,
+  .gw-contact .webform-options-display-one-column { grid-template-columns: 1fr 1fr; }
+  .gw-contact .gw-contact-form-wrap { padding: 24px; border-radius: 22px; }
+  .gw-contact .formhead { display: block; }
+  .gw-contact .form-actions { display: block; }
+  .gw-contact .form-actions::before { display: block; margin: 0 0 16px; }
+  .gw-contact .form-submit,
+  .gw-contact .webform-button--submit { width: 100%; }
+  .gw-contact .after,
+  .gw-contact .offices,
+  .gw-contact .privacy { padding: 70px 0; }
+  .gw-contact .office h3 { margin-top: 38px; }
+  .gw-contact .prow { grid-template-columns: 1fr; }
+  .gw-contact .discipline-rail { grid-template-columns: 1fr; }
+  .gw-contact .himalaya-footer { flex-direction: column; gap: 9px; }
+  .gw-contact .dalai-row { grid-template-columns: 1fr; }
+  .gw-contact .trail-meta { display: none; }
+}
+.gw-field.webform-type-checkbox.form-item-marketing.js-form-item-marketing {
+    flex-direction: row;
+}
