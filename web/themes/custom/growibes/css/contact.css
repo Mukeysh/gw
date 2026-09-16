@@ -26,10 +26,9 @@
 }
 
 .gw-contact .kicker {
-  font-size: 10px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: .19em;
-  font-weight: 850;
   color: var(--soft);
 }
 
