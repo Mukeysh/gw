@@ -9,8 +9,12 @@
  */
 #}
 <div{{ attributes.addClass('gw-html') }}>
+  {# Must sit inside the island so it applies in Shadow DOM. #}
+  <link rel="stylesheet" href="/themes/custom/growibes/components/html/island.css">
   {% if css %}
     <style>{{ css|raw }}</style>
   {% endif %}
+  <div class="gw-html__content">
   {{ html|raw }}
+  </div>
 </div>

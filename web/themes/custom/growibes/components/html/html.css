@@ -1,6 +1,16 @@
 .gw-html {
   display: block;
   min-height: 40vh;
+  /* Inherited into the shadow island — one knob for every page hero. */
+  --gw-hero-pad-top: 120px;
+  --gw-hero-pad-bottom: 90px;
+}
+
+@media (max-width: 900px) {
+  .gw-html {
+    --gw-hero-pad-top: 100px;
+    --gw-hero-pad-bottom: 60px;
+  }
 }
 
 .gw-html > style {
