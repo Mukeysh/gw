@@ -22,13 +22,24 @@ global-styling:
     - core/drupal
     - core/once
 
-contact:
+system:
   version: 1.0.1
   css:
     theme:
-      css/contact.css: {}
+      css/system.css: {}
   dependencies:
     - growibes/global-styling
+
+contact:
+  version: 1.0.3
+  css:
+    theme:
+      css/contact.css: {}
+  js:
+    js/contact.js: {}
+  dependencies:
+    - growibes/global-styling
+    - core/drupal
 
 global:
   dependencies:

@@ -1,0 +1,55 @@
+{#
+/**
+ * @file
+ * User, 403 and 404 pages — Growibes chrome, not default Drupal.
+ */
+#}
+<div class="layout-container">
+  {% if page.header %}
+    <div class="gw-page-header" role="banner">
+      {{ page.header }}
+    </div>
+  {% endif %}
+
+  <main id="main-content" class="gw-page-main gw-system gw-system--{{ gw_system.kind|default('page') }}" role="main" tabindex="-1">
+    <section class="gw-system__stage">
+      <div class="gw-system__wrap">
+        {% if gw_system.kicker %}
+          <div class="gw-system__kicker">{{ gw_system.kicker }}</div>
+        {% endif %}
+        <h1>{{ gw_system.title }}</h1>
+        {% if gw_system.dek %}
+          <p class="gw-system__dek">{{ gw_system.dek }}</p>
+        {% endif %}
+
+        {% if gw_system.actions %}
+          <div class="gw-system__actions">
+            <a class="gw-system__btn" href="{{ path('<front>') }}">Back to Growibes</a>
+            {% if gw_system.login %}
+              <a class="gw-system__btn gw-system__btn--ghost" href="{{ path('user.login') }}">Sign in</a>
+            {% endif %}
+            <a class="gw-system__btn gw-system__btn--ghost" href="/contact">Talk to a Senior Architect</a>
+          </div>
+        {% endif %}
+
+        {% if gw_system.show_content %}
+          <div class="gw-system__panel">
+            {% if page.highlighted %}
+              <div class="gw-system__tools">{{ page.highlighted }}</div>
+            {% endif %}
+            {% if page.status %}
+              <div class="gw-status">{{ page.status }}</div>
+            {% endif %}
+            {{ page.content }}
+          </div>
+        {% endif %}
+      </div>
+    </section>
+  </main>
+
+  {% if page.footer %}
+    <div class="gw-page-footer" role="contentinfo">
+      {{ page.footer }}
+    </div>
+  {% endif %}
+</div>

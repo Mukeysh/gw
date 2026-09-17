@@ -10,6 +10,8 @@ declare(strict_types=1);
 use Drupal\Core\Menu\MenuTreeParameters;
 use Drupal\Core\Render\Element;
 use Drupal\Core\Url;
+use Symfony\Component\HttpKernel\Exception\AccessDeniedHttpException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 /**
  * Implements hook_preprocess_html().
@@ -31,12 +33,21 @@ function growibes_theme_suggestions_page_alter(array &$suggestions, array $varia
   if (growibes_is_contact_page()) {
     $suggestions[] = 'page__contact';
   }
+  if (growibes_system_page_kind() !== '') {
+    $suggestions[] = 'page__system';
+  }
 }
 
 function growibes_preprocess_page(array &$variables): void {
   $variables['growibes_canvas'] = !empty($variables['rendered_by_canvas']);
   if (growibes_is_contact_page()) {
     $variables['#attached']['library'][] = 'growibes/contact';
+  }
+
+  $kind = growibes_system_page_kind();
+  if ($kind !== '') {
+    $variables['#attached']['library'][] = 'growibes/system';
+    $variables['gw_system'] = growibes_system_page_copy($kind);
   }
 
   if (!growibes_region_has_content($variables['page']['header'] ?? [])) {
@@ -127,6 +138,83 @@ function growibes_prepare_menu_items(array &$items): void {
 function growibes_form_webform_submission_growibes_contact_add_form_alter(array &$form, $form_state, $form_id): void {
   $form['#attributes']['class'][] = 'gw-contact-form';
   $form['actions']['submit']['#attributes']['class'][] = 'submit';
+}
+
+/**
+ * Kind of Drupal system page to restyle: 404, 403, user, or empty.
+ */
+function growibes_system_page_kind(): string {
+  $request = \Drupal::requestStack()->getCurrentRequest();
+  $exception = $request?->attributes->get('exception');
+  if ($exception instanceof NotFoundHttpException) {
+    return '404';
+  }
+  if ($exception instanceof AccessDeniedHttpException) {
+    return '403';
+  }
+  $route = (string) \Drupal::routeMatch()->getRouteName();
+  if ($route === 'system.404') {
+    return '404';
+  }
+  if ($route === 'system.403') {
+    return '403';
+  }
+  if ($route === 'entity.user.canonical' || $route === 'entity.user.edit_form' || str_starts_with($route, 'user.')) {
+    return 'user';
+  }
+  return '';
+}
+
+/**
+ * Copy and flags for user / 403 / 404 templates.
+ */
+function growibes_system_page_copy(string $kind): array {
+  if ($kind === '404') {
+    return [
+      'kind' => '404',
+      'kicker' => 'Growibes / 404',
+      'title' => 'This page is not here.',
+      'dek' => 'The URL may have moved, or it never existed. The rest of the site is still where you left it.',
+      'actions' => TRUE,
+      'login' => FALSE,
+      'show_content' => FALSE,
+    ];
+  }
+  if ($kind === '403') {
+    return [
+      'kind' => '403',
+      'kicker' => 'Growibes / 403',
+      'title' => 'This door is closed.',
+      'dek' => 'You do not have access to this page. If you should, sign in — or talk to us if something looks wrong.',
+      'actions' => TRUE,
+      'login' => TRUE,
+      'show_content' => FALSE,
+    ];
+  }
+  $route = (string) \Drupal::routeMatch()->getRouteName();
+  $title = 'Sign in.';
+  $dek = 'For the Growibes team and invited partners.';
+  if ($route === 'user.pass') {
+    $title = 'Reset your password.';
+    $dek = 'We will email a one-time login link.';
+  }
+  elseif ($route === 'user.register') {
+    $title = 'Create an account.';
+    $dek = 'Registration is limited.';
+  }
+  elseif ($route === 'entity.user.canonical' || $route === 'entity.user.edit_form') {
+    $title = 'Your account.';
+    $dek = '';
+  }
+  return [
+    'kind' => 'user',
+    'kicker' => 'Growibes / Account',
+    'title' => $title,
+    'dek' => $dek,
+    'actions' => FALSE,
+    'login' => FALSE,
+    'show_content' => TRUE,
+  ];
 }
 
 /**

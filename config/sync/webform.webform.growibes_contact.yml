@@ -121,7 +121,7 @@ elements: |-
 css: ''
 javascript: ''
 settings:
-  ajax: false
+  ajax: true
   ajax_scroll_top: form
   ajax_progress_type: ''
   ajax_effect: ''
@@ -226,7 +226,7 @@ settings:
   draft_pending_single_message: ''
   draft_pending_multiple_message: ''
   confirmation_type: inline
-  confirmation_url: ''
+  confirmation_url: '/contact#form'
   confirmation_title: ''
   confirmation_message: '<p class="gw-contact-thanks"><strong>Thank you.</strong> We have your enquiry and will route it to the right senior people. This is not a marketing subscription.</p>'
   confirmation_attributes: {  }
@@ -281,11 +281,11 @@ handlers:
     settings:
       states:
         - completed
-      to_mail: nitish@growibes.com
+      to_mail: growibesdigital@gmail.com
       to_options: {  }
       bcc_mail: ''
       bcc_options: {  }
-      cc_mail: hello@growibes.com
+      cc_mail: chanderbhushan8819@gmail.com
       cc_options: {  }
       from_mail: _default
       from_options: {  }

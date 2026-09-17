@@ -1,0 +1,250 @@
+/**
+ * User / 403 / 404 — matches Growibes marketing chrome.
+ */
+
+.gw-system {
+  background: #07090d;
+  color: #fff;
+}
+
+.gw-system__stage {
+  min-height: calc(100vh - 80px);
+  padding: 140px 0 100px;
+  background:
+    radial-gradient(circle at 78% 18%, rgba(47, 124, 255, .22), transparent 28%),
+    radial-gradient(circle at 12% 88%, rgba(214, 255, 89, .08), transparent 24%),
+    #07090d;
+}
+
+.gw-system__wrap {
+  width: min(720px, calc(100% - 48px));
+  margin: auto;
+}
+
+.gw-system__kicker {
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: .19em;
+  text-transform: uppercase;
+  color: #8ab5ff;
+}
+
+.gw-system h1 {
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: .88 !important;
+  letter-spacing: -.07em;
+  margin: 16px 0 18px;
+  max-width: 16ch;
+}
+
+.gw-system__dek {
+  margin: 0;
+  max-width: 38em;
+  font-size: 17px;
+  line-height: 1.5;
+  color: #b9c1cc;
+}
+
+.gw-system__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.gw-system .gw-system__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  border-radius: 999px;
+  background: #fff;
+  color: #07080b;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.gw-system__btn--ghost {
+  background: rgba(255, 255, 255, .06);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, .2);
+}
+
+.gw-system__btn:hover {
+  filter: brightness(1.06);
+}
+
+.gw-system__panel {
+  margin-top: 36px;
+  background: #fff;
+  color: #10151b;
+  border-radius: 28px;
+  padding: 32px;
+  box-shadow: 0 28px 90px rgba(7, 9, 13, .18);
+}
+
+.gw-system__tools {
+  margin-bottom: 22px;
+}
+
+.gw-system__tools ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gw-system__tools li {
+  list-style: none;
+  margin: 0;
+}
+
+.gw-system__tools a {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #d5d9df;
+  font-size: 12px;
+  font-weight: 700;
+  color: #151a21;
+  text-decoration: none;
+}
+
+.gw-system__tools a.is-active,
+.gw-system__tools .is-active > a {
+  background: #07090d;
+  border-color: #07090d;
+  color: #fff;
+}
+
+.gw-system .tabs,
+.gw-system nav.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  border: 0;
+}
+
+.gw-system .tabs li,
+.gw-system .tabs__tab {
+  list-style: none;
+  margin: 0;
+}
+
+.gw-system .tabs a,
+.gw-system .tabs__link {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid #d5d9df;
+  font-size: 12px;
+  font-weight: 700;
+  color: #151a21;
+}
+
+.gw-system .tabs a.is-active,
+.gw-system .tabs a.active,
+.gw-system .is-active > a,
+.gw-system .tabs__link.is-active {
+  background: #07090d;
+  border-color: #07090d;
+  color: #fff;
+}
+
+.gw-system .form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  margin: 0 0 16px;
+}
+
+.gw-system label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #151a21;
+}
+
+.gw-system input[type="text"],
+.gw-system input[type="email"],
+.gw-system input[type="password"],
+.gw-system input[type="search"],
+.gw-system textarea,
+.gw-system select {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #d2d6dc;
+  border-radius: 13px;
+  padding: 14px 15px;
+  font: inherit;
+  font-size: 14px;
+  color: #10151b;
+  background: #fff;
+  outline: none;
+}
+
+.gw-system input:focus,
+.gw-system textarea:focus,
+.gw-system select:focus {
+  border-color: #2f7cff;
+  box-shadow: 0 0 0 4px rgba(47, 124, 255, .12);
+}
+
+.gw-system .description {
+  font-size: 12px;
+  color: #6f7782;
+  line-height: 1.45;
+}
+
+.gw-system .form-actions {
+  margin-top: 8px;
+}
+
+.gw-system .form-submit,
+.gw-system .button--primary {
+  border: 0;
+  background: #07090d;
+  color: #fff;
+  border-radius: 999px;
+  padding: 14px 22px;
+  font-weight: 850;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.gw-system .form-submit:hover,
+.gw-system .button--primary:hover {
+  background: #18202b;
+}
+
+.gw-system .button {
+  border-radius: 999px;
+}
+
+.gw-system ul {
+  margin: 0 0 16px;
+  padding-left: 18px;
+}
+
+.gw-system a {
+  color: inherit;
+}
+
+@media (max-width: 650px) {
+  .gw-system__stage {
+    padding: 112px 0 72px;
+  }
+
+  .gw-system__wrap {
+    width: calc(100% - 32px);
+  }
+
+  .gw-system__panel {
+    padding: 22px;
+    border-radius: 22px;
+  }
+}

@@ -527,11 +527,26 @@
   background: #18202b;
 }
 
-.gw-contact .gw-contact-thanks {
-  margin: 0;
-  font-size: 15px;
-  line-height: 1.5;
+.gw-contact .gw-status {
+  width: auto;
+}
+
+.gw-contact .gw-contact-thanks,
+.gw-contact .webform-confirmation,
+.gw-contact .messages--status,
+.gw-contact .messages {
+  margin: 0 0 12px;
+  padding: 16px 18px;
+  border-radius: 14px;
+  background: #e8f7ee;
+  font-size: 16px;
+  line-height: 1.55;
   color: #176b3a;
+}
+
+.gw-contact-form-wrap:has(.webform-confirmation) .required,
+.gw-contact-form-wrap:has(.webform-confirmation) .formhead {
+  display: none;
 }
 
 .gw-contact .after {
