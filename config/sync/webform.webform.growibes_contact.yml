@@ -294,7 +294,7 @@ handlers:
       return_path: ''
       sender_mail: ''
       sender_name: ''
-      subject: 'Growibes contact: [webform_submission:values:need:raw] ([webform_submission:values:email:raw])'
+      subject: _default
       body: _default
       excluded_elements: {  }
       ignore_access: false

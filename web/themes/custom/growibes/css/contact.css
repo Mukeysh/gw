@@ -538,10 +538,16 @@
   margin: 0 0 12px;
   padding: 16px 18px;
   border-radius: 14px;
-  background: #e8f7ee;
+  background: #081510;
   font-size: 16px;
   line-height: 1.55;
-  color: #176b3a;
+  color: #fff;
+}
+
+.webform-confirmation__back a {
+  border: 1px solid #fff;
+  border-radius: 8px;
+  padding: 10px;
 }
 
 .gw-contact-form-wrap:has(.webform-confirmation) .required,
