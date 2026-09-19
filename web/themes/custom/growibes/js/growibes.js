@@ -74,7 +74,8 @@
         panel.style.transform = "";
         return;
       }
-      const headerRect = header.getBoundingClientRect();
+      const inner = header.querySelector(".gw-header__inner") || header;
+      const headerRect = inner.getBoundingClientRect();
       const itemRect = item.getBoundingClientRect();
       panel.style.transform = "none";
       panel.style.left = `${Math.round(headerRect.left - itemRect.left)}px`;

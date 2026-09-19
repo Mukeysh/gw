@@ -66,9 +66,16 @@ function growibes_preprocess_page(array &$variables): void {
   }
 
   if (!growibes_region_has_content($variables['page']['footer'] ?? [])) {
+    $logo_path = \Drupal::service('extension.list.theme')->getPath('growibes') . '/logo.jpeg';
     $variables['page']['footer']['growibes_footer'] = [
       '#type' => 'component',
       '#component' => 'growibes:footer',
+      '#props' => [
+        'logo_src' => \Drupal::service('file_url_generator')->generateString($logo_path),
+      ],
+      '#slots' => [
+        'navigation' => growibes_build_footer_menu(),
+      ],
       '#weight' => 100,
     ];
   }
@@ -95,6 +102,15 @@ function growibes_build_main_menu(): array {
     ['callable' => 'menu.default_tree_manipulators:generateIndexAndSort'],
   ]);
   return $menu_tree->build($tree);
+}
+
+/**
+ * Same Main menu tree as the header, rendered as footer columns.
+ */
+function growibes_build_footer_menu(): array {
+  $build = growibes_build_main_menu();
+  $build['#theme'] = 'menu__footer';
+  return $build;
 }
 
 /**

@@ -1,12 +1,26 @@
 {#
 /**
  * @file
- * Global footer from GROWIBES_PRODUCTION_MASTER/00_Homepage/growibes-homepage-final-award.html
+ * Global footer — brand, Main menu columns, contact CTA.
  */
 #}
 <footer{{ attributes.addClass('gw-footer') }}>
-  <div class="gw-container gw-footer__inner">
-    <b>{{ brand|default('GROWIBES') }}</b>
-    <span>{{ tagline|default('Enterprise digital engineering for the Drupal + AI era.') }}</span>
+  <div class="gw-container">
+    <div class="gw-footer__top">
+      <a class="gw-footer__brand" href="{{ logo_href|default('/') }}">
+        <img src="{{ logo_src|default('/themes/custom/growibes/logo.jpeg') }}" alt="{{ brand|default('Growibes') }}" width="168" height="56">
+        <span>{{ tagline|default('Enterprise digital engineering for the Drupal + AI era.') }}</span>
+      </a>
+      <a class="gw-footer__cta" href="{{ cta_href|default('/contact') }}">{{ cta_label|default('Talk to an Architect') }}</a>
+    </div>
+    {% if navigation %}
+      <nav class="gw-footer__nav" aria-label="{{ 'Footer'|t }}">
+        {{ navigation }}
+      </nav>
+    {% endif %}
+    <div class="gw-footer__bottom">
+      <b>{{ brand|default('GROWIBES') }}</b>
+      <span>© {{ 'now'|date('Y') }} · Built in the Himalayas. Engineered for the world.</span>
+    </div>
   </div>
 </footer>

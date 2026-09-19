@@ -1,0 +1,81 @@
+{#
+/**
+ * @file
+ * Footer columns from the Main menu — one level, not the full mega tree.
+ */
+#}
+{% import _self as menus %}
+{{ menus.cols(items) }}
+
+{% macro group_url(group) %}
+  {%- if not group.is_nolink and group.url.toString != '/' -%}
+    {{- group.url -}}
+  {%- else -%}
+    {%- set href = '' -%}
+    {%- for child in group.below -%}
+      {%- if href is empty and child.title == 'Overview' and not child.is_nolink and child.url.toString != '/' -%}
+        {%- set href = child.url.toString -%}
+      {%- endif -%}
+    {%- endfor -%}
+    {%- if href is empty -%}
+      {%- for child in group.below -%}
+        {%- if href is empty and not child.is_nolink and child.url.toString != '/' -%}
+          {%- set href = child.url.toString -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endif -%}
+    {{- href -}}
+  {%- endif -%}
+{% endmacro %}
+
+{% macro cols(items) %}
+  {% import _self as menus %}
+  {% if items %}
+    <ul class="gw-footer__cols">
+      {% for item in items %}
+        {% set has_children = item.below is not empty %}
+        <li class="gw-footer__col">
+          {% if has_children %}
+            <div class="gw-footer__heading">{{ item.title }}</div>
+            {% if item.is_mega %}
+              <ul class="gw-footer__list">
+                {% for group in item.below %}
+                  {% set href = menus.group_url(group) %}
+                  <li>
+                    {% if href %}
+                      <a href="{{ href }}">{{ group.title }}</a>
+                    {% else %}
+                      <span>{{ group.title }}</span>
+                    {% endif %}
+                  </li>
+                {% endfor %}
+              </ul>
+            {% else %}
+              {{ menus.links(item.below) }}
+            {% endif %}
+          {% elseif item.is_nolink %}
+            <span class="gw-footer__heading">{{ item.title }}</span>
+          {% else %}
+            <a class="gw-footer__heading gw-footer__heading--link" href="{{ item.url }}">{{ item.title }}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{% macro links(items) %}
+  <ul class="gw-footer__list">
+    {% for item in items %}
+      {% if item.url.toString != '/' %}
+        <li>
+          {% if item.is_nolink %}
+            <span>{{ item.title }}</span>
+          {% else %}
+            <a href="{{ item.url }}">{{ item.title }}</a>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endmacro %}
