@@ -26,9 +26,8 @@
 
 .gw-footer__brand img {
   display: block;
-  height: 40px;
   width: auto;
-  max-width: 168px;
+  width: 160px;
   mix-blend-mode: screen;
 }
 

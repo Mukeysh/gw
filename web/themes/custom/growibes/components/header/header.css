@@ -34,9 +34,8 @@
 
 .gw-logo img {
   display: block;
-  height: 40px;
   width: auto;
-  max-width: 168px;
+  width: 150px;
   mix-blend-mode: screen;
 }
 
@@ -258,8 +257,7 @@ body.toolbar-horizontal.toolbar-tray-open .gw-header {
 
 @media (max-width: 1080px) {
   .gw-logo img {
-    height: 32px;
-    max-width: 136px;
+    width: 136px;
   }
 
   .gw-header__links {
