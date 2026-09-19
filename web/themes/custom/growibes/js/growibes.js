@@ -206,8 +206,6 @@
 
       const gap = 10;
       let index = 0;
-      let timer = null;
-      let hovering = false;
       const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
       const itemWidth = () => {
@@ -249,39 +247,8 @@
         goTo(index - 1, true);
       };
 
-      const stop = () => {
-        if (timer) {
-          window.clearInterval(timer);
-          timer = null;
-        }
-      };
-
-      const play = () => {
-        stop();
-        if (reduce || hovering) {
-          return;
-        }
-        timer = window.setInterval(nextSlide, 3200);
-      };
-
-      prev?.addEventListener("click", () => {
-        prevSlide();
-        play();
-      });
-      next?.addEventListener("click", () => {
-        nextSlide();
-        play();
-      });
-      carousel.addEventListener("mouseenter", () => {
-        hovering = true;
-        stop();
-      });
-      carousel.addEventListener("mouseleave", () => {
-        hovering = false;
-        play();
-      });
-      carousel.addEventListener("focusin", stop);
-      carousel.addEventListener("focusout", play);
+      prev?.addEventListener("click", prevSlide);
+      next?.addEventListener("click", nextSlide);
 
       let startX = 0;
       viewport.addEventListener("pointerdown", (event) => {
@@ -293,12 +260,10 @@
           return;
         }
         delta < 0 ? nextSlide() : prevSlide();
-        play();
       });
 
       window.addEventListener("resize", layout);
       layout();
-      play();
     });
   };
 
